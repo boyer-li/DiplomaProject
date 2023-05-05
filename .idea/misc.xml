@@ -5,6 +5,9 @@
     <file type="web" url="file://$PROJECT_DIR$/linjiashop-admin-api" />
     <file type="web" url="file://$PROJECT_DIR$/linjiashop-mobile-api" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

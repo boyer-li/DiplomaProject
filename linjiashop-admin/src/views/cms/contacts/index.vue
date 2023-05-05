@@ -3,7 +3,7 @@
     <div class="block">
       <el-row  :gutter="20">
         <el-col :span="6">
-          <el-input v-model="listQuery.userName" size="mini" placeholder="姓名"></el-input>
+          <el-input v-model="listQuery.userName" size="mini" placeholder="Name"></el-input>
         </el-col>
         <el-col :span="6">
           <el-input v-model="listQuery.mobile" size="mini"  placeholder="手机号"></el-input>

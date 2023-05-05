@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || '邻家小铺后台管理' // page title
+const name = defaultSettings.title || 'SHGTS Management' // page title
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
@@ -35,7 +35,7 @@ module.exports = {
     },
     proxy: {
       [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:8082`,
+        target: `http://localhost:8090`,
         changeOrigin: true,// target是域名的话，需要这个参数
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: ''

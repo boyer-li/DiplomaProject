@@ -43,7 +43,7 @@
                     {{scope.row.district}}
                 </template>
             </el-table-column>
-            <el-table-column label="详细地址">
+            <el-table-column label="Detailed address">
                 <template slot-scope="scope">
                     {{scope.row.address}}
                 </template>
@@ -110,7 +110,7 @@
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="详细地址"  >
+                        <el-form-item label="Detailed address"  >
                             <el-input v-model="form.address" minlength=1></el-input>
                         </el-form-item>
                     </el-col>

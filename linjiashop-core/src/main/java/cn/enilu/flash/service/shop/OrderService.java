@@ -59,7 +59,7 @@ public class OrderService extends BaseService<Order, Long, OrderRepository> {
                 GoodsSku goodsSku = goodsSkuService.get(item.getIdSku());
                 goodsSku.setStock(goodsSku.getStock()-item.getCount());
                 if(goodsSku.getStock()<0){
-                    throw  new RuntimeException("库存不足");
+                    throw  new RuntimeException("Insufficient inventory");
                 }
                 //更新sku的库存
                 goodsSkuService.update(goodsSku);
@@ -77,7 +77,7 @@ public class OrderService extends BaseService<Order, Long, OrderRepository> {
                 //更新商品库存
                 goods.setStock(goods.getStock()-item.getCount());
                 if(goods.getStock()<0){
-                    throw  new RuntimeException("库存不足");
+                    throw  new RuntimeException("Insufficient inventory");
                 }
                 goodsService.update(goods);
             }

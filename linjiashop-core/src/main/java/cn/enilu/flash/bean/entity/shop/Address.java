@@ -30,7 +30,7 @@ public class Address extends ShopBaseEntity {
     @Column(columnDefinition = "VARCHAR(16) COMMENT '地区编码'")
     private String areaCode;
 
-    @Column(columnDefinition = "VARCHAR(64) COMMENT '详细地址'")
+    @Column(columnDefinition = "VARCHAR(64) COMMENT 'Detailed address'")
     private String addressDetail;
     @Column(columnDefinition = "VARCHAR(6) COMMENT '邮政编码'")
     private String postCode;

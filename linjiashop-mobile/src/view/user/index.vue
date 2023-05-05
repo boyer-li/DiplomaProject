@@ -33,12 +33,13 @@
       <van-cell icon="setting-o" title="Setting" is-link to="setting"/>
     </van-cell-group>
     <br><br>
-    <van-tabbar v-model="activeFooter">
-      <van-tabbar-item icon="home-o"  replace to="/index">Home</van-tabbar-item>
-      <van-tabbar-item icon="search"  replace to="/search">Found</van-tabbar-item>
-      <van-tabbar-item icon="cart-o"  replace to="/cart">Shopping Cart</van-tabbar-item>
-      <van-tabbar-item icon="user-o"  replace to="/user">Me</van-tabbar-item>
-    </van-tabbar>
+        <van-tabbar v-model="activeFooter">
+            <van-tabbar-item icon="home-o"  replace to="/index">Home</van-tabbar-item>
+            <van-tabbar-item icon="search"  replace to="/search">Found</van-tabbar-item>
+            <van-tabbar-item icon="home-o" replace to="">Upload</van-tabbar-item>
+            <van-tabbar-item icon="cart-o"  replace to="/cart">Shopping Cart</van-tabbar-item>
+            <van-tabbar-item icon="user-o"  replace to="/user">Me</van-tabbar-item>
+        </van-tabbar>
 
   </div>
 </template>

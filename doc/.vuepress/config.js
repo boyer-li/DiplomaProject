@@ -1,5 +1,5 @@
 module.exports = {
-    title: '邻家小铺',
+    title: 'SHGT System',
     description: '使用邻家小铺搭建自己的全平台商城系统',
     base: '/linjiashop/',
     head: [

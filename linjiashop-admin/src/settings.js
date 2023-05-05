@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: '邻家小铺后台管理',
+  title: 'SHGTS Management',
 
   /**
    * @type {boolean} true | false

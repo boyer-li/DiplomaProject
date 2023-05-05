@@ -49,7 +49,7 @@
           {{ scope.row.account }}
         </template>
       </el-table-column>
-      <el-table-column label="姓名">
+      <el-table-column label="Name">
         <template slot-scope="scope">
           {{ scope.row.name }}
         </template>
@@ -74,7 +74,7 @@
           {{ scope.row.email }}
         </template>
       </el-table-column>
-      <el-table-column label="电话">
+      <el-table-column label="Phone">
         <template slot-scope="scope">
           {{ scope.row.phone }}
         </template>
@@ -118,7 +118,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="姓名" prop="name">
+            <el-form-item label="Name" prop="name">
               <el-input v-model="form.name" minlength=1></el-input>
             </el-form-item>
           </el-col>
@@ -147,7 +147,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="电话" prop="phone">
+            <el-form-item label="Phone" prop="phone">
               <el-input v-model="form.phone"></el-input>
             </el-form-item>
           </el-col>

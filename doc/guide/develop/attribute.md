@@ -22,14 +22,14 @@
     3GB+32GB	1
     4GB+64GB	1
     珊瑚橙	    2
-    深海蓝	    2
+    Deep Sea Blue	    2
     ```
     ```商品sku配置：
     code    code_name       id_goods    marketing_price     price    stock
     1,3	    3GB+32GB,珊瑚橙	1		                        69900	 100
-    1,4	    3GB+32GB,深海蓝	1		                        69900	 100
+    1,4	    3GB+32GB,Deep Sea Blue	1		                        69900	 100
     2,3	    4GB+64GB,珊瑚橙	1	        79900	            74900	 100
-    2,4	    4GB+64GB,深海蓝	1	        79900	            74900	 100
+    2,4	    4GB+64GB,Deep Sea Blue	1	        79900	            74900	 100
 
     ```
     
@@ -88,7 +88,7 @@
                     },
                     {
                         "id":"4",
-                        "name":"深海蓝"
+                        "name":"Deep Sea Blue"
                     }
                 ]
             }

@@ -28,7 +28,7 @@ public class GoodsSku extends BaseEntity {
     private Long idGoods;
     @Column(name="price",columnDefinition = "VARCHAR(32) COMMENT '价格'")
     private BigDecimal price;
-    @Column(name="marketing_price",columnDefinition = "VARCHAR(32) COMMENT '市场价,原价'")
+    @Column(name="marketing_price",columnDefinition = "VARCHAR(32) COMMENT '市场价,Original Price'")
     private BigDecimal marketingPrice;
     @Column(name="stock",columnDefinition = "INT COMMENT '库存'")
     private Integer stock;

@@ -226,7 +226,7 @@ CREATE TABLE `t_shop_address` (
                                   `id` bigint(20) NOT NULL AUTO_INCREMENT,
                                   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
                                   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-                                  `address_detail` varchar(64) DEFAULT NULL COMMENT '详细地址',
+                                  `address_detail` varchar(64) DEFAULT NULL COMMENT 'Detailed address',
                                   `area_code` varchar(16) DEFAULT NULL COMMENT '地区编码',
                                   `city` varchar(16) DEFAULT NULL COMMENT '市',
                                   `district` varchar(16) DEFAULT NULL COMMENT '区县',
@@ -291,7 +291,7 @@ CREATE TABLE `t_shop_attr_val` (
 INSERT INTO `t_shop_attr_val` VALUES ('1', '1', '2019-12-10 18:57:57', null, null, '3GB+32GB', '1');
 INSERT INTO `t_shop_attr_val` VALUES ('2', '1', '2019-12-10 18:57:57', null, null, '4GB+64GB', '1');
 INSERT INTO `t_shop_attr_val` VALUES ('3', '1', '2019-12-10 18:57:57', null, null, '珊瑚橙', '2');
-INSERT INTO `t_shop_attr_val` VALUES ('4', '1', '2019-12-10 18:57:57', null, null, '深海蓝', '2');
+INSERT INTO `t_shop_attr_val` VALUES ('4', '1', '2019-12-10 18:57:57', null, null, 'Deep Sea Blue', '2');
 
 -- ----------------------------
 -- Table structure for `t_shop_cart`
@@ -423,8 +423,8 @@ CREATE TABLE `t_shop_express_info` (
 -- ----------------------------
 -- Records of t_shop_express_info
 -- ----------------------------
-INSERT INTO `t_shop_express_info` VALUES ('1', null, '2021-01-03 01:06:40', null, '2021-01-03 01:17:41', '圆通快递', '4', '[{\"AcceptTime\":\"2020-12-25 23:02:51\",\"AcceptStation\":\"【广东省广州市白云区大源公司】 已收件 取件人: 王仟 (15112094169)\"},{\"AcceptTime\":\"2020-12-26 01:00:51\",\"AcceptStation\":\"【广东省广州市白云区大源】 已发出 下一站 【广州转运中心公司】\"},{\"AcceptTime\":\"2020-12-26 02:12:34\",\"AcceptStation\":\"【广州转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-26 03:02:34\",\"AcceptStation\":\"【广州转运中心】 已发出\"},{\"AcceptTime\":\"2020-12-28 04:26:14\",\"AcceptStation\":\"【浦东转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 04:42:09\",\"AcceptStation\":\"【浦东转运中心】 已发出 下一站 【上海市浦东新区博兴菏泽路分部公司】\"},{\"AcceptTime\":\"2020-12-28 07:33:45\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 08:41:53\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 派件中  派件人: 李红彬 电话 13381798120  如有疑问，请联系：18521102150\"},{\"AcceptTime\":\"2020-12-28 11:54:00\",\"AcceptStation\":\"快件已由上海市莱阳路431号店菜鸟驿站代收，请及时取件，如有疑问请联系13262707273\"},{\"AcceptTime\":\"2020-12-28 19:59:21\",\"AcceptStation\":\"客户签收人: 已签收，签收人凭取货码签收。 已签收  感谢使用圆通速递，期待再次为您服务 如有疑问请联系：13381798120，投诉电话：18521102150\"}]', 'YT9420173297830', '1');
-INSERT INTO `t_shop_express_info` VALUES ('2', null, '2021-01-03 02:20:06', null, '2021-01-03 02:20:06', '圆通快递', '3', '[{\"AcceptTime\":\"2020-12-25 23:02:51\",\"AcceptStation\":\"【广东省广州市白云区大源公司】 已收件 取件人: 王仟 (15112094169)\"},{\"AcceptTime\":\"2020-12-26 01:00:51\",\"AcceptStation\":\"【广东省广州市白云区大源】 已发出 下一站 【广州转运中心公司】\"},{\"AcceptTime\":\"2020-12-26 02:12:34\",\"AcceptStation\":\"【广州转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-26 03:02:34\",\"AcceptStation\":\"【广州转运中心】 已发出\"},{\"AcceptTime\":\"2020-12-28 04:26:14\",\"AcceptStation\":\"【浦东转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 04:42:09\",\"AcceptStation\":\"【浦东转运中心】 已发出 下一站 【上海市浦东新区博兴菏泽路分部公司】\"},{\"AcceptTime\":\"2020-12-28 07:33:45\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 08:41:53\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 派件中  派件人: 李红彬 电话 13381798120  如有疑问，请联系：18521102150\"},{\"AcceptTime\":\"2020-12-28 11:54:00\",\"AcceptStation\":\"快件已由上海市莱阳路431号店菜鸟驿站代收，请及时取件，如有疑问请联系13262707273\"},{\"AcceptTime\":\"2020-12-28 19:59:21\",\"AcceptStation\":\"客户签收人: 已签收，签收人凭取货码签收。 已签收  感谢使用圆通速递，期待再次为您服务 如有疑问请联系：13381798120，投诉电话：18521102150\"}]', 'YT9420173297830', '1');
+INSERT INTO `t_shop_express_info` VALUES ('1', null, '2021-01-03 01:06:40', null, '2021-01-03 01:17:41', '圆通快递', '4', '[{\"AcceptTime\":\"2020-12-25 23:02:51\",\"AcceptStation\":\"【广东省广州市白云区大源公司】 已收件 取件人: 王仟 (15112094169)\"},{\"AcceptTime\":\"2020-12-26 01:00:51\",\"AcceptStation\":\"【广东省广州市白云区大源】 已发出 下一站 【广州转运中心公司】\"},{\"AcceptTime\":\"2020-12-26 02:12:34\",\"AcceptStation\":\"【广州转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-26 03:02:34\",\"AcceptStation\":\"【广州转运中心】 已发出\"},{\"AcceptTime\":\"2020-12-28 04:26:14\",\"AcceptStation\":\"【浦东转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 04:42:09\",\"AcceptStation\":\"【浦东转运中心】 已发出 下一站 【上海市浦东新区博兴菏泽路分部公司】\"},{\"AcceptTime\":\"2020-12-28 07:33:45\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 08:41:53\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 派件中  派件人: 李红彬 Phone 13381798120  如有疑问，请联系：18521102150\"},{\"AcceptTime\":\"2020-12-28 11:54:00\",\"AcceptStation\":\"快件已由上海市莱阳路431号店菜鸟驿站代收，请及时取件，如有疑问请联系13262707273\"},{\"AcceptTime\":\"2020-12-28 19:59:21\",\"AcceptStation\":\"客户签收人: 已签收，签收人凭取货码签收。 已签收  感谢使用圆通速递，期待再次为您服务 如有疑问请联系：13381798120，投诉电话：18521102150\"}]', 'YT9420173297830', '1');
+INSERT INTO `t_shop_express_info` VALUES ('2', null, '2021-01-03 02:20:06', null, '2021-01-03 02:20:06', '圆通快递', '3', '[{\"AcceptTime\":\"2020-12-25 23:02:51\",\"AcceptStation\":\"【广东省广州市白云区大源公司】 已收件 取件人: 王仟 (15112094169)\"},{\"AcceptTime\":\"2020-12-26 01:00:51\",\"AcceptStation\":\"【广东省广州市白云区大源】 已发出 下一站 【广州转运中心公司】\"},{\"AcceptTime\":\"2020-12-26 02:12:34\",\"AcceptStation\":\"【广州转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-26 03:02:34\",\"AcceptStation\":\"【广州转运中心】 已发出\"},{\"AcceptTime\":\"2020-12-28 04:26:14\",\"AcceptStation\":\"【浦东转运中心公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 04:42:09\",\"AcceptStation\":\"【浦东转运中心】 已发出 下一站 【上海市浦东新区博兴菏泽路分部公司】\"},{\"AcceptTime\":\"2020-12-28 07:33:45\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 已收入\"},{\"AcceptTime\":\"2020-12-28 08:41:53\",\"AcceptStation\":\"【上海市浦东新区博兴菏泽路分部公司】 派件中  派件人: 李红彬 Phone 13381798120  如有疑问，请联系：18521102150\"},{\"AcceptTime\":\"2020-12-28 11:54:00\",\"AcceptStation\":\"快件已由上海市莱阳路431号店菜鸟驿站代收，请及时取件，如有疑问请联系13262707273\"},{\"AcceptTime\":\"2020-12-28 19:59:21\",\"AcceptStation\":\"客户签收人: 已签收，签收人凭取货码签收。 已签收  感谢使用圆通速递，期待再次为您服务 如有疑问请联系：13381798120，投诉电话：18521102150\"}]', 'YT9420173297830', '1');
 
 -- ----------------------------
 -- Table structure for `t_shop_favorite`
@@ -525,7 +525,7 @@ CREATE TABLE `t_shop_goods_sku` (
                                     `code_name` varchar(32) DEFAULT NULL COMMENT 'sku名称,格式:逗号分割的属性值',
                                     `id_goods` bigint(20) DEFAULT NULL COMMENT '商品id',
                                     `is_deleted` tinyint(4) DEFAULT NULL COMMENT '是否删除1:是,0:否',
-                                    `marketing_price` varchar(32) DEFAULT NULL COMMENT '市场价,原价',
+                                    `marketing_price` varchar(32) DEFAULT NULL COMMENT '市场价,Original Price',
                                     `price` varchar(32) DEFAULT NULL COMMENT '价格',
                                     `stock` int(11) DEFAULT NULL COMMENT '库存',
                                     PRIMARY KEY (`id`)
@@ -535,9 +535,9 @@ CREATE TABLE `t_shop_goods_sku` (
 -- Records of t_shop_goods_sku
 -- ----------------------------
 INSERT INTO `t_shop_goods_sku` VALUES ('1', null, '2019-12-10 18:57:57', null, '2021-10-29 09:21:12', '1,3', '3GB+32GB,珊瑚橙', '1', '0', null, '100', '99');
-INSERT INTO `t_shop_goods_sku` VALUES ('2', null, '2019-12-10 18:57:57', null, null, '1,4', '3GB+32GB,深海蓝', '1', '0', null, '100', '100');
+INSERT INTO `t_shop_goods_sku` VALUES ('2', null, '2019-12-10 18:57:57', null, null, '1,4', '3GB+32GB,Deep Sea Blue', '1', '0', null, '100', '100');
 INSERT INTO `t_shop_goods_sku` VALUES ('3', null, '2019-12-10 18:57:57', null, '2021-10-29 08:42:30', '2,3', '4GB+64GB,珊瑚橙', '1', '0', '300', '200', '99');
-INSERT INTO `t_shop_goods_sku` VALUES ('4', null, '2019-12-10 18:57:57', null, null, '2,4', '4GB+64GB,深海蓝', '1', '0', '300', '200', '100');
+INSERT INTO `t_shop_goods_sku` VALUES ('4', null, '2019-12-10 18:57:57', null, null, '2,4', '4GB+64GB,Deep Sea Blue', '1', '0', '300', '200', '100');
 
 -- ----------------------------
 -- Table structure for `t_shop_order`
@@ -1170,7 +1170,7 @@ CREATE TABLE `t_sys_notice` (
 -- ----------------------------
 -- Records of t_sys_notice
 -- ----------------------------
-INSERT INTO `t_sys_notice` VALUES ('1', '1', '2017-01-11 08:53:20', '1', '2019-01-08 23:30:58', '欢迎使用邻家小铺后台管理系统', '邻家小铺', '10');
+INSERT INTO `t_sys_notice` VALUES ('1', '1', '2017-01-11 08:53:20', '1', '2019-01-08 23:30:58', '欢迎使用邻家小铺后台管理系统', 'SHGT System', '10');
 
 -- ----------------------------
 -- Table structure for `t_sys_operation_log`
