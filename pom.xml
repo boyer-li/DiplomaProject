@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.enilu</groupId>
-    <artifactId>linjiashop</artifactId>
+    <artifactId>diploma</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>linjiashop-core</module>
-        <module>linjiashop-generator</module>
-        <module>linjiashop-mobile-api</module>
-        <module>linjiashop-admin-api</module>
+        <module>diploma-core</module>
+        <module>diploma-generator</module>
+        <module>diploma-mobile-api</module>
+        <module>diploma-admin-api</module>
     </modules>
 
     <properties>

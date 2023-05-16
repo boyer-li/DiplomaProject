@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v13.1.1 (64 bit)
-MySQL - 8.0.24 : Database - linjiashop
+MySQL - 8.0.24 : Database - diploma
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 8.0.24 : Database - linjiashop
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`linjiashop` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`diploma` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
-USE `linjiashop`;
+USE `diploma`;
 
 /*Table structure for table `t_cms_article` */
 
@@ -68,7 +68,7 @@ CREATE TABLE `t_cms_banner` (
 insert  into `t_cms_banner`(`id`,`create_by`,`create_time`,`modify_by`,`modify_time`,`id_file`,`page`,`param`,`title`,`type`,`url`) values 
 (1,1,'2019-03-09 16:29:03',NULL,NULL,'75b1e658-161e-4b12-83b0-abd2c1bead39.jpg','goods','{\"id\":2}','红米Rote8,打开外部链接','index',NULL),
 (2,1,'2019-03-09 16:29:03',NULL,NULL,'cfd733e0-4a8a-4b87-8f30-fb909025c647.jpg','goods','{\"id\":1}','红米8A','index',NULL),
-(3,1,'2019-03-09 16:29:03',NULL,NULL,'2ba1e87f-f04e-40b5-8d99-63e035a9d752.jpg','https://microapp.gitee.io/linjiashop',NULL,'打开外部链接','index',NULL),
+(3,1,'2019-03-09 16:29:03',NULL,NULL,'2ba1e87f-f04e-40b5-8d99-63e035a9d752.jpg','https://microapp.gitee.io/diploma',NULL,'打开外部链接','index',NULL),
 (4,1,'2019-03-09 16:29:03',NULL,NULL,'00950b78-0fc6-4e88-b663-07dc46a2b6df.jpg','goods','{\"id\":15}','不打开链接','product',NULL),
 (5,1,'2019-03-09 16:29:03',NULL,NULL,'8974ee52-c261-440a-84d3-8f8c1bd43a6a.jpg','goods','{\"id\":16}','打打开站内链接','product',NULL),
 (6,1,'2019-03-09 16:29:03',NULL,NULL,'14f9ce27-f133-4321-aeb5-aed470b794d6.jpg','goods','{\"id\":11}','打开外部链接','product',NULL),
@@ -762,7 +762,7 @@ CREATE TABLE `t_sys_cfg` (
 /*Data for the table `t_sys_cfg` */
 
 insert  into `t_sys_cfg`(`id`,`create_by`,`create_time`,`modify_by`,`modify_time`,`cfg_desc`,`cfg_name`,`cfg_value`) values 
-(1,1,'2020-01-01 17:06:43',1,'2020-01-19 18:36:04','应用名称','system.app.name','linjiashop'),
+(1,1,'2020-01-01 17:06:43',1,'2020-01-19 18:36:04','应用名称','system.app.name','diploma'),
 (2,1,'2020-01-01 17:06:43',1,'2019-11-13 16:05:21','系统默认上传文件路径','system.file.upload.path','D:\\upload'),
 (3,1,'2020-01-01 17:06:43',1,'2019-04-15 21:36:17','腾讯sms接口appid','api.tencent.sms.appid','需要去申请咯'),
 (4,1,'2020-01-01 17:06:43',1,'2019-04-15 21:36:17','腾讯sms接口appkey','api.tencent.sms.appkey','需要去申请咯'),
@@ -1460,7 +1460,7 @@ CREATE TABLE `t_sys_task` (
 /*Data for the table `t_sys_task` */
 
 insert  into `t_sys_task`(`id`,`create_by`,`create_time`,`modify_by`,`modify_time`,`concurrent`,`cron`,`data`,`disabled`,`exec_at`,`exec_result`,`job_class`,`job_group`,`name`,`note`) values 
-(1,1,'2018-12-28 09:54:00',-1,'2023-05-04 14:00:00',0,'0 0/30 * * * ?','{\n\"appname\": \"linjiashop\",\n\"version\":1}',0,'2023-05-04 14:00:00','执行成功','cn.enilu.flash.service.task.job.HelloJob','default','测试任务','测试任务,每30分钟执行一次'),
+(1,1,'2018-12-28 09:54:00',-1,'2023-05-04 14:00:00',0,'0 0/30 * * * ?','{\n\"appname\": \"diploma\",\n\"version\":1}',0,'2023-05-04 14:00:00','执行成功','cn.enilu.flash.service.task.job.HelloJob','default','测试任务','测试任务,每30分钟执行一次'),
 (2,1,'2020-01-19 17:40:02',-1,'2023-05-04 14:00:03',0,'0 0 0/1 * * ?','',0,'2023-05-04 14:00:00','执行失败','cn.enilu.flash.service.task.job.UpdateWeixinTokenJob',NULL,'更新微信token','获取微信token，每小时获取一次'),
 (3,1,'2021-02-01 15:12:50',-1,'2023-05-04 16:05:00',0,'0 5 0/1 * * ?','{\"hour\":12}',0,'2023-05-04 16:05:00','执行成功','cn.enilu.flash.service.task.job.ProcessInvalidOrdersJob',NULL,'定时取消未支付的订单',NULL);
 

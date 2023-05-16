@@ -7,10 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="linjiashop-generator" />
-        <module name="linjiashop-admin-api" />
-        <module name="linjiashop-core" />
-        <module name="linjiashop-mobile-api" />
+        <module name="diploma-core" />
+        <module name="diploma-admin-api" />
+        <module name="diploma-generator" />
+        <module name="diploma-mobile-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

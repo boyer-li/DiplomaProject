@@ -21,5 +21,5 @@
 - ‘商品管理’-‘商品类别’中维护商品类别和banner的关系
 ## 前端使用
 - 商城模块目前提供了t_shop_category_banner_rel表来维护不通商品分类对应的的banner信息
-- 系统提供了获取商品分类及各个分类下的banner列表，数据样例参考：http://linjiashop-mobile-api.microapp.store/category/list
+- 系统提供了获取商品分类及各个分类下的banner列表，数据样例参考：http://diploma-mobile-api.microapp.store/category/list
 - 前端的具体用法参考 “表设计”小结的page和param介绍

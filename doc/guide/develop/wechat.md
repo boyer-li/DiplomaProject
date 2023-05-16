@@ -22,7 +22,7 @@
 - 系统默认提供了定时任务：UpdateWeixinTokenJob 来每隔一个小时获取一次上面两个值并存在参数配置表(t_sys_cfg)中
 
 ## 获取用户信息
-linjiashop-mobile项目提供了用户登录后获取微信用户基本信息（微信昵称、头像、openid）的功能
+diploma-mobile项目提供了用户登录后获取微信用户基本信息（微信昵称、头像、openid）的功能
 src/view/user/user.js中当用户成功获取基本信息后，会紧接着获取微信相关信息。
 部分代码示例：
 ```javascript
@@ -46,7 +46,7 @@ init() {
 - 后台具体获取逻辑可以从上述代码进行调试跟进，继而查看和调整。
 
 ## 微信支付
-linjiashop-mobile集成了微信支付来支付订单金额。支持微信支付通过以下步骤实现。
+diploma-mobile集成了微信支付来支付订单金额。支持微信支付通过以下步骤实现。
 
 ### 参数配置
 - 配置微信支付相关参数：在配置文件linjiashop-mobile-api/src/main/resource/application-dev(prod).properties：
@@ -57,9 +57,9 @@ linjiashop-mobile集成了微信支付来支付订单金额。支持微信支付
     wx.mch-id=商户号
     wx.mch-key=API密钥
     # 支付结果通知地址
-    wx.notify-url=http://linjiashop.microapp.store/prodp-api/pay/wx/notify
+    wx.notify-url=http://diploma.microapp.store/prodp-api/pay/wx/notify
     #商户证书文件路径
-    wx.key-path= /data/linjiashop...
+    wx.key-path= /data/diploma...
     ```
 ### maven依赖
 - 本系统使用了weixin-java-pay封装的微信的java sdk，因此需要在maven以来中加入改项目，另外小程序和h5用的同一个后台，因此同时也加入了小程序的java sdk：weixin-java-miniapp（小程序暂未对接）
@@ -78,8 +78,8 @@ linjiashop-mobile集成了微信支付来支付订单金额。支持微信支付
 - 后台的微信支付相关对接代码参阅：WeixinPayService
 ### 前端提交微信支付
 前端支付相关代码：
-- 提交支付：linjiashop-mobile/src/view/order/payment/index.vue 
-- 支付结果界面：linjiashop-mobile/src/view/order/payment/callback/index.vue 
+- 提交支付：diploma-mobile/src/view/order/payment/index.vue 
+- 支付结果界面：diploma-mobile/src/view/order/payment/callback/index.vue 
 ### 支付结果通知
 - 前端发起微信支付提交之后，微信会通过配置的通知地址将支付结果主动送过来，本项目默认的的微信通知地址应配置为：http://域名/prod-api/pay/wx/notify；可根据实际情况自行调整
 

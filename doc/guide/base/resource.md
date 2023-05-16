@@ -10,7 +10,7 @@
 
 ### vue-element-admin
 - [https://panjiachen.gitee.io/vue-element-admin-site/zh/](https://panjiachen.gitee.io/vue-element-admin-site/zh/)
-- linjiashop-admin使用了vue-element-admin作为基础框架，基于linjiashop-admin开发之前强烈建议先看下vue-element-admin的官方文档
+- diploma-admin使用了vue-element-admin作为基础框架，基于linjiashop-admin开发之前强烈建议先看下vue-element-admin的官方文档
 
 
 ## Vue.js
@@ -19,15 +19,15 @@
 
 ## Vant
 - [https://youzan.github.io/vant/#/zh-CN/intro](https://youzan.github.io/vant/#/zh-CN/intro)
-- linjiashop-mobile项目使用了Vant组件，上面是其官方文档
+- diploma-mobile项目使用了Vant组件，上面是其官方文档
 
 ## Vant-weapp
 - [https://youzan.github.io/vant-weapp/#/intro](https://youzan.github.io/vant-weapp/#/intro)
-- linjiashop-wxapp使用了Vant-weapp作为基础的ui组件，上面是其官方文档
+- diploma-wxapp使用了Vant-weapp作为基础的ui组件，上面是其官方文档
 
 ## mpvue
 - [http://mpvue.com/](http://mpvue.com/)
-- linjiashop-wxapp使用了mpvue作为基础框架，上面为其官方文档
+- diploma-wxapp使用了mpvue作为基础框架，上面为其官方文档
 
 ## 后端
 ## Spring Boot

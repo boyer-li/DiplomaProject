@@ -1,19 +1,19 @@
-# linjiashop-uniapp
+# diploma-uniapp
 
 
 ## 前言 
-- linjiashop-uniapp，是[SHGT System](http://linjiashop.enilu.cn/linjiashop/)的uniapp版本，通过uniapp技术达到一套代码覆盖全平台(H5,Android,IOS,微信小程序，其他如支付宝，qq，头条小程序也可以通过简单的适配实现)的目的
-- 项目地址[gitee](https://gitee.com/microapp/linjiashop-uniapp),[github](https://github.com/microapp-store/linjiashop-uniapp)
-- [官方文档：http://linjiashop.enilu.cn/linjiashop/](http://linjiashop.enilu.cn/linjiashop/ecosystem/uniapp.html)
+- diploma-uniapp，是[SHGT System](http://diploma.enilu.cn/diploma/)的uniapp版本，通过uniapp技术达到一套代码覆盖全平台(H5,Android,IOS,微信小程序，其他如支付宝，qq，头条小程序也可以通过简单的适配实现)的目的
+- 项目地址[gitee](https://gitee.com/microapp/diploma-uniapp),[github](https://github.com/microapp-store/diploma-uniapp)
+- [官方文档：http://diploma.enilu.cn/diploma/](http://diploma.enilu.cn/diploma/ecosystem/uniapp.html)
 
 ## 演示
 
-- H5：[http://linjiashop.microapp.store/](http://linjiashop.microapp.store/) 浏览器打开后通过F12打开控制台使用手机模式查看
-- App:[http://fir.microapp.store/linjiashop](http://fir.microapp.store/linjiashop)
+- H5：[http://diploma.microapp.store/](http://diploma.microapp.store/) 浏览器打开后通过F12打开控制台使用手机模式查看
+- App:[http://fir.microapp.store/diploma](http://fir.microapp.store/diploma)
 - 微信小程序：请自己用微信开发工具预览
 
 ## 快速开始
-- 克隆本项目 git clone https://gitee.com/microapp/linjiashop-uniapp.git
+- 克隆本项目 git clone https://gitee.com/microapp/diploma-uniapp.git
 - 使用Hbuilder X 开发工具打开本项目进行开发（本项目开发使用开发工具的2.7.14版本，为避免出现不必要的问题，建议使用开发工具不要低于本版本）
 - 具体开发过程请参考uniapp[官方文档](https://uniapp.dcloud.io/)和uView的[官方文档](https://www.uviewui.com/)
 

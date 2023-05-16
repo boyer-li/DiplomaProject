@@ -6,8 +6,8 @@
 
 ```properties
 ## 开发环境配置，根据实际情况调整数据库连接信息
-spring.datasource.url=jdbc:mysql://localhost:3306/linjiashop?useUnicode=true&characterEncoding=UTF8
-spring.datasource.username=linjiashop
+spring.datasource.url=jdbc:mysql://localhost:3306/diploma?useUnicode=true&characterEncoding=UTF8
+spring.datasource.username=diploma
 spring.datasource.password=linjiashop191028
 
 ```

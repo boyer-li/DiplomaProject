@@ -94,4 +94,4 @@ server {
 - 注意我使用上面的配置的时候，前端的两个项目admin和mobile没有更改任何配置，分别运行npm run build:prod 和npm run build打包后直接用了。很多朋友打包部署这里遇到各种各样的问题，根本原因有两点，一是没有搞懂vue.config.js中的配置，二是对nginx的配置不明白不会用。
 
 
- **如果大家对上线运营笔记相关内容有意见和建议，请在gitee上issue评论区进行讨论：[邻家小铺上线日记评论区](https://gitee.com/microapp/linjiashop/issues/I1H4V3)**
+ **如果大家对上线运营笔记相关内容有意见和建议，请在gitee上issue评论区进行讨论：[邻家小铺上线日记评论区](https://gitee.com/microapp/diploma/issues/I1H4V3)**

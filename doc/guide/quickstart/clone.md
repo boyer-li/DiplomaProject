@@ -1,8 +1,8 @@
 # 克隆本项目
 
-本项目地址为：[https://gitee.com/microapp/linjiashop](https://gitee.com/microapp/linjiashop),如果对你有用，欢迎给个star
+本项目地址为：[https://gitee.com/microapp/diploma](https://gitee.com/microapp/diploma),如果对你有用，欢迎给个star
 
-另附github地址：https://github.com/microapp-store/linjiashop
+另附github地址：https://github.com/microapp-store/diploma
 
 项目共三个分支分别为：
 - master 项目主分支：稳定版
@@ -11,4 +11,4 @@
 
 进入控制台输入以下命令将项目克隆到本地：
 
-git clone https://gitee.com/microapp/linjiashop.git
+git clone https://gitee.com/microapp/diploma.git

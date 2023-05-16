@@ -1,6 +1,6 @@
 # Change log
 ## v0.9
-- 主项目：[gitee](https://gitee.com/microapp/linjiashop/releases/v0.9) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.9)
+- 主项目：[gitee](https://gitee.com/microapp/diploma/releases/v0.9) [github](https://github.com/microapp-store/diploma/releases/tag/v0.9)
 ### Issues
 - Change node-sass替换为dart-sass
 - Change 完善微信用户登录逻辑
@@ -14,8 +14,8 @@
 - Fix 修复保存用户的时候如果不输入生日报错的问题
 - Fix 修复用户未登录时查询商品详情懒加载异常的问题
 ## v0.8
-- 主项目：[gitee](https://gitee.com/microapp/linjiashop/releases/v0.8) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.8)
-- linjiashop-uniapp: [gitee](https://gitee.com/microapp/linjiashop-uniapp/releases/v0.8) [github](https://github.com/microapp-store/linjiashop-uniapp/releases/tag/v0.8)
+- 主项目：[gitee](https://gitee.com/microapp/diploma/releases/v0.8) [github](https://github.com/microapp-store/diploma/releases/tag/v0.8)
+- diploma-uniapp: [gitee](https://gitee.com/microapp/diploma-uniapp/releases/v0.8) [github](https://github.com/microapp-store/diploma-uniapp/releases/tag/v0.8)
 ### Issues
 - Issue 定时取消超时未支付的订单
 - Change 完善默认的收获地址逻辑
@@ -34,8 +34,8 @@
 
 
 ## v0.7
-- 主项目：[gitee](https://gitee.com/microapp/linjiashop/releases/v0.7) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.7)
-- linjiashop-uniapp: [gitee](https://gitee.com/microapp/linjiashop-uniapp/releases/v0.7) [github](https://github.com/microapp-store/linjiashop-uniapp/releases/tag/v0.7)
+- 主项目：[gitee](https://gitee.com/microapp/diploma/releases/v0.7) [github](https://github.com/microapp-store/diploma/releases/tag/v0.7)
+- diploma-uniapp: [gitee](https://gitee.com/microapp/diploma-uniapp/releases/v0.7) [github](https://github.com/microapp-store/diploma-uniapp/releases/tag/v0.7)
 ### Issues
 - 去掉Menu中无用的status字段
 - 重构菜单功能，增加菜单图标选择，菜单类别等逻辑
@@ -51,7 +51,7 @@
 - Fix 文件下载bug
 
 ## v0.6
-[gitee](https://gitee.com/microapp/linjiashop/releases/v0.6) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.6)
+[gitee](https://gitee.com/microapp/diploma/releases/v0.6) [github](https://github.com/microapp-store/diploma/releases/tag/v0.6)
 ### Issues
 - echarts随着窗口缩放自适应
 - 用户个人中心增加收藏商品管理功能
@@ -69,7 +69,7 @@
 - 商品类别中维护商品规格属性名的时候可以重复的问题
 
 ## v0.5
-[gitee](https://gitee.com/microapp/linjiashop/releases/v0.5) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.5)
+[gitee](https://gitee.com/microapp/diploma/releases/v0.5) [github](https://github.com/microapp-store/diploma/releases/tag/v0.5)
 ### Issues
 - 对接微信-获取微信用户信息
 - 重构日志记录方式（直接使用实体类的comment注释代替自定义AbstractDictMap子类的方式来描述更改的字段信息）
@@ -90,7 +90,7 @@
 
 
 ## v0.4
-[gitee](https://gitee.com/microapp/linjiashop/releases/v0.4) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.4)
+[gitee](https://gitee.com/microapp/diploma/releases/v0.4) [github](https://github.com/microapp-store/diploma/releases/tag/v0.4)
 
 ### Issues
 - 【后台管理】管理员给订单添加备注信息
@@ -116,7 +116,7 @@
 
 
 ## v0.3
- [gitee](https://gitee.com/microapp/linjiashop/releases/v0.3)
+ [gitee](https://gitee.com/microapp/diploma/releases/v0.3)
 ### Issues 
 - 【后台管理】压缩svg图标
 - 【H5】新增未登录状态和购物车为空状态下的购物车界面
@@ -135,7 +135,7 @@
 - 【后台管理】 banner上传问题
 
 ## v0.2
- [gitee](https://gitee.com/microapp/linjiashop/releases/v0.2) [github](https://github.com/microapp-store/linjiashop/releases/tag/v0.2)
+ [gitee](https://gitee.com/microapp/diploma/releases/v0.2) [github](https://github.com/microapp-store/diploma/releases/tag/v0.2)
 ### Issues
 - 【API】 Token过期自动刷新
 - 【后台管理】 用户列表增加用户头像，注册时间列，添加过滤功能，增加用户详情页内容
@@ -151,9 +151,9 @@
 
 
 ## v0.1
-[gitee](https://gitee.com/microapp/linjiashop/releases/v0.1)[github](https://github.com/microapp-store/linjiashop/releases/tag/v0.1)
+[gitee](https://gitee.com/microapp/diploma/releases/v0.1)[github](https://github.com/microapp-store/diploma/releases/tag/v0.1)
 ### Issues
 - 【后台管理】  基础的管理功能：用户，权限，菜单，角色，定时任务，消息发送，日志，监控
 - 【后台管理】  业务功能：商品类别维护，商品维护，banner维护，订单管理，购物车列表，用户列表
 - 【H5,小程序】用户登录，商品列表，banner列表，搜索，商品详情，购物车，下单，历史订单
-- 【APP商城】  另外发布了商城的app版本（基于Flutter):linjiashop-flutter
+- 【APP商城】  另外发布了商城的app版本（基于Flutter):diploma-flutter

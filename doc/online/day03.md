@@ -33,4 +33,4 @@
 
 
     
- **如果大家对上线运营笔记相关内容有意见和建议，请在gitee上issue评论区进行讨论：[邻家小铺上线日记评论区](https://gitee.com/microapp/linjiashop/issues/I1H4V3)**
+ **如果大家对上线运营笔记相关内容有意见和建议，请在gitee上issue评论区进行讨论：[邻家小铺上线日记评论区](https://gitee.com/microapp/diploma/issues/I1H4V3)**

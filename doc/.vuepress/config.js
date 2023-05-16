@@ -1,7 +1,7 @@
 module.exports = {
     title: 'SHGT System',
     description: '使用邻家小铺搭建自己的全平台商城系统',
-    base: '/linjiashop/',
+    base: '/diploma/',
     head: [
         ['link', {rel: 'shortcut icon', type: "image/x-icon", href: './favicon.ico'}],
         ['script', {}, `
@@ -20,7 +20,7 @@ module.exports = {
     port: 8090,
     ga: 'UA-71886989-13',
     themeConfig: {
-        repo: 'microapp-store/linjiashop',
+        repo: 'microapp-store/diploma',
         docsDir: 'doc',
         editLinks: true,
         editLinkText: '编辑此页面！',
@@ -31,8 +31,8 @@ module.exports = {
                 items: [
                     {
                         text: "项目", items: [
-                            {text: 'linjiashop-flutter(app)', link: '/ecosystem/app'},
-                            {text: 'linjiashop-uniapp', link: '/ecosystem/uniapp'},
+                            {text: 'diploma-flutter(app)', link: '/ecosystem/app'},
+                            {text: 'diploma-uniapp', link: '/ecosystem/uniapp'},
                             {text: 'web-flash', link: 'http://webflash.enilu.cn/'},
                             {text: 'code-generator', link: 'http://webflash.enilu.cn/ecosystem/code-generator.html'},
                             {text: 'database-doc-generator', link: 'http://webflash.enilu.cn/ecosystem/database-doc-generator.html'},
@@ -53,7 +53,7 @@ module.exports = {
             },
             {text: '上线实战', link: '/online/summary'},
             {text: '捐赠', link: '/donate'},
-            {text: 'Gitee', link: 'https://gitee.com/microapp/linjiashop'}
+            {text: 'Gitee', link: 'https://gitee.com/microapp/diploma'}
         ],
         sidebar: {
             '/guide/': [

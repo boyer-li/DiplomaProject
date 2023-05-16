@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/linjiashop-admin-api" />
-    <file type="web" url="file://$PROJECT_DIR$/linjiashop-mobile-api" />
+    <file type="web" url="file://$PROJECT_DIR$/diploma-admin-api" />
+    <file type="web" url="file://$PROJECT_DIR$/diploma-mobile-api" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -13,6 +13,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/linjiashop-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/diploma-admin-api/pom.xml" />
+        <option value="$PROJECT_DIR$/diploma-core/pom.xml" />
+        <option value="$PROJECT_DIR$/diploma-generator/pom.xml" />
       </list>
     </option>
   </component>

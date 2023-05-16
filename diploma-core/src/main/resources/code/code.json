@@ -1,0 +1,13 @@
+//代码生成配置，具体用法参考：http://enilu.gitee.io/web-flash/ecosystem/code-generator.html
+{
+  "codeConfig": {
+    "type": "cn.enilu.flash.code.CodeConfig",
+    "fields": {
+      entityModel: "diploma-core",
+      daoModel: "diploma-core",
+      serviceModel: "diploma-core",
+      controllerModel: "diploma-admin-api",
+      viewModel: "diploma-admin"
+    }
+  }
+}
