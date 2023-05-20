@@ -82,7 +82,7 @@ export default {
             //     } else {
             //         const userAgent = window.navigator.userAgent.toLowerCase()
             //         //使用微信访问本系统的时候获取微信openid，否则不获取
-            //         if (userAgent.indexOf('micromessenger') > -1) {推荐
+            //         if (userAgent.indexOf('micromessenger') > -1) {Recommend
             //             this.processOpenid()
             //         }
             //     }

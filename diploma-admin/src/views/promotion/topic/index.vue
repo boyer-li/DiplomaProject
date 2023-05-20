@@ -44,7 +44,7 @@
 
     <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
               @current-change="handleCurrentChange">
-      <el-table-column label="标题">
+      <el-table-column label="Title">
         <template slot-scope="scope">
           {{scope.row.title}}
         </template>
@@ -112,7 +112,7 @@
       <el-form ref="form" :model="form" :rules="rules" label-width="150px">
         <el-row>
           <el-col :span="12">
-            <el-form-item label="标题">
+            <el-form-item label="Title">
               <el-input v-model="form.title" minlength=4 placeholder="请输入标题"></el-input>
             </el-form-item>
           </el-col>

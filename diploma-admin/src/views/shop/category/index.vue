@@ -128,7 +128,7 @@
         <el-tab-pane label="管理" name="first">
           <el-button type="primary" size="mini" icon="el-icon-plus" @click.native="addBanner">添加</el-button>
           <el-table :data="banner.list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row>
-            <el-table-column label="标题">
+            <el-table-column label="Title">
               <template slot-scope="scope">
                 {{scope.row.title}}
               </template>

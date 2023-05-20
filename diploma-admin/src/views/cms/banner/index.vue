@@ -3,7 +3,7 @@
     <div class="block">
       <el-row  :gutter="20">
         <el-col :span="6">
-          <el-input v-model="listQuery.title" size="mini" placeholder="标题"></el-input>
+          <el-input v-model="listQuery.title" size="mini" placeholder="Title"></el-input>
         </el-col>
 
         <el-col :span="6">
@@ -32,7 +32,7 @@
           {{scope.row.id}}
         </template>
       </el-table-column>
-      <el-table-column label="标题">
+      <el-table-column label="Title">
         <template slot-scope="scope">
           {{scope.row.title}}
         </template>
@@ -89,7 +89,7 @@
           <el-col :span="12">
             <el-row>
               <el-col :span="24">
-                <el-form-item label="标题" prop="title">
+                <el-form-item label="Title" prop="title">
                   <el-input v-model="form.title" minlength=1></el-input>
                 </el-form-item>
               </el-col>

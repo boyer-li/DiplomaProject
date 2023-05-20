@@ -18,7 +18,7 @@ import 'echarts/lib/component/visualMap'
 import 'echarts/lib/component/dataset'
 import 'echarts/map/js/world'
 import 'zrender/lib/svg/svg'
-import elementResizeDetectorMaker from "element-resize-detector"
+import elementResizeDetectorMaker from 'element-resize-detector'
 export default {
 
   name: 'dashboard',
@@ -72,31 +72,31 @@ export default {
           {
             name: this.$t('dashboard.email'),
             type: 'line',
-            stack: '总量',
+            stack: 'Total volume',
             data: [120, 132, 101, 134, 90, 230, 210]
           },
           {
             name: this.$t('dashboard.ad'),
             type: 'line',
-            stack: '总量',
+            stack: 'Total volume',
             data: [220, 182, 191, 234, 290, 330, 310]
           },
           {
             name: this.$t('dashboard.vedio'),
             type: 'line',
-            stack: '总量',
+            stack: 'Total volume',
             data: [150, 232, 201, 154, 190, 330, 410]
           },
           {
             name: this.$t('dashboard.direct'),
             type: 'line',
-            stack: '总量',
+            stack: 'Total volume',
             data: [320, 332, 301, 334, 390, 330, 320]
           },
           {
             name: this.$t('dashboard.searchEngine'),
             type: 'line',
-            stack: '总量',
+            stack: 'Total volume',
             data: [820, 932, 901, 934, 1290, 1330, 1320]
           }
         ]
@@ -117,7 +117,7 @@ export default {
       pieData: {
         title: {
           text: this.$t('dashboard.userFrom'),
-          subtext: '纯属虚构',
+          subtext: '',
           x: 'center'
         },
         tooltip: {
@@ -154,20 +154,20 @@ export default {
       },
       tableData: [{
         date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
+        name: 'Li Boyi',
+        address: 'Minsk Bsuir'
       }, {
         date: '2016-05-04',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1517 弄'
+        name: 'Li Boyi',
+        address: 'Minsk Bsuir'
       }, {
         date: '2016-05-01',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1519 弄'
+        name: 'Li Boyi',
+        address: 'Minsk Bsuir'
       }, {
         date: '2016-05-03',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1516 弄'
+        name: 'Li Boyi',
+        address: 'Minsk Bsuir'
       }]
     }
   },

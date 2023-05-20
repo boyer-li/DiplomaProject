@@ -14,7 +14,7 @@
                 <div slot="footer"
                      class="footer_btn">
                     <van-button size="small" type="default" @click="contact">Contact Customer Service</van-button>
-                    <van-button size="small" type="danger" @click="payment" v-show="order.statusName=='待付款'">Pay Now</van-button>
+                    <van-button size="small" type="danger" @click="payment" v-show="order.statusName=='Payment pending'">Pay Now</van-button>
                     <van-button size="small" type="danger" @click="confirmReceive" v-show="order.statusName=='已发货'">Confirm receipt</van-button>
                 </div>
             </van-panel>
@@ -32,9 +32,9 @@
                 <div class="total">Total: {{formatPrice(order.totalPrice)}}</div>
 
             </van-panel>
-            <van-panel title="订单信息" >
+            <van-panel title="Order Information" >
                 <van-cell-group>
-                    <van-cell title="Order Information" :value="order.orderSn" />
+                    <van-cell title="Order Number" :value="order.orderSn" />
                     <van-cell title="Remarks" :value="order.message"   />
                     <van-cell title="Creation time" :value="order.createTime"/>
                 </van-cell-group>
@@ -46,7 +46,7 @@
         <van-tabbar v-model="activeFooter">
             <van-tabbar-item icon="home-o"  replace to="/index">Home</van-tabbar-item>
             <van-tabbar-item icon="search"  replace to="/search">Found</van-tabbar-item>
-            <van-tabbar-item icon="home-o" replace to="">Upload</van-tabbar-item>
+            <!--            <van-tabbar-item icon="home-o" replace to="">Upload</van-tabbar-item>-->
             <van-tabbar-item icon="cart-o"  replace to="/cart">Shopping Cart</van-tabbar-item>
             <van-tabbar-item icon="user-o"  replace to="/user">Me</van-tabbar-item>
         </van-tabbar>

@@ -1,8 +1,8 @@
 <template>
     <div>
         <van-tabs v-model="activeNav" @click="onClickNav">
-            <van-tab title="推荐" name="0" >
-            </van-tab>
+<!--            <van-tab title="Recommend" name="0" >
+            </van-tab>-->
             <van-tab v-for="nav in navList" :title="nav.name" :name="nav.id"  >
             </van-tab>
         </van-tabs>
@@ -31,7 +31,7 @@
         <van-tabbar v-model="activeFooter">
             <van-tabbar-item icon="home-o"  replace to="/index">Home</van-tabbar-item>
             <van-tabbar-item icon="search"  replace to="/search">Found</van-tabbar-item>
-            <van-tabbar-item icon="home-o" replace to="">Upload</van-tabbar-item>
+<!--                        <van-tabbar-item icon="home-o" replace to="">Upload</van-tabbar-item>-->
             <van-tabbar-item icon="cart-o"  replace to="/cart">Shopping Cart</van-tabbar-item>
             <van-tabbar-item icon="user-o"  replace to="/user">Me</van-tabbar-item>
         </van-tabbar>

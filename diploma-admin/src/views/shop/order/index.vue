@@ -9,7 +9,7 @@
             </el-col>
             <el-col :span="22">
               <el-button :type="query.button.css.status.all" size="small" @click.native="queryByState('all')" >全部</el-button>
-              <el-button  size="mini" :type="query.button.css.status.unPay" @click.native="queryByState('unPay')">待付款 &nbsp;<el-tag type="success"  size="mini">{{query.button.tag.unPay}}</el-tag></el-button>
+              <el-button  size="mini" :type="query.button.css.status.unPay" @click.native="queryByState('unPay')">Payment pending &nbsp;<el-tag type="success"  size="mini">{{query.button.tag.unPay}}</el-tag></el-button>
               <el-button  size="mini" :type="query.button.css.status.unSend" @click.native="queryByState('unSend')">待发货&nbsp;<el-tag type="danger"  size="mini">{{query.button.tag.unSend}}</el-tag></el-button>
               <el-button  size="mini" :type="query.button.css.status.sended" @click.native="queryByState('sended')">已发货&nbsp;<el-tag type="info"  size="mini">{{query.button.tag.sended}}</el-tag></el-button>
               <el-button  size="mini" :type="query.button.css.status.finished" @click.native="queryByState('finished')">已完成&nbsp;<el-tag type="info"  size="mini">{{query.button.tag.finished}}</el-tag></el-button>
@@ -111,7 +111,7 @@
 
               操作
             <el-dropdown-menu slot="dropdown">
-              <!--<el-dropdown-item v-if="scope.row.statusName === '待付款'">修改订单</el-dropdown-item>-->
+              <!--<el-dropdown-item v-if="scope.row.statusName === 'Payment pending'">修改订单</el-dropdown-item>-->
               <el-dropdown-item @click.native="addComment(scope.row.id)">订单备注</el-dropdown-item>
               <el-dropdown-item v-if="scope.row.statusName==='已发货'" @click.native="viewShippingInfo(scope.row)">物流信息</el-dropdown-item>
               <el-dropdown-item v-if="scope.row.statusName === '待发货'" @click.native="openSendOutForm(scope.row.id)">立即发货</el-dropdown-item>

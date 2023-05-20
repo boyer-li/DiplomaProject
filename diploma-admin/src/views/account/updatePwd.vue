@@ -14,27 +14,27 @@
       </el-col>
       <el-col :span="18" style="padding-left:10px;">
         <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="个人资料" name="profile"></el-tab-pane>
-          <el-tab-pane label="最近活动" name="timeline"></el-tab-pane>
-          <el-tab-pane label="修改密码" name="updatePwd"></el-tab-pane>
+          <el-tab-pane label="Personal Info" name="profile"></el-tab-pane>
+          <el-tab-pane label="Recent Activities" name="timeline"></el-tab-pane>
+          <el-tab-pane label="Change password" name="updatePwd"></el-tab-pane>
         </el-tabs>
         <el-form ref="form" :model="form"   label-width="150px">
 
         <el-row>
           <el-col :span="24">
-            <el-form-item label="原密码">
+            <el-form-item label="Original Password">
               <el-input type="password" v-model="form.oldPassword"  ></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="新密码" prop="password">
+            <el-form-item label="New Password" prop="password">
               <el-input type="password" v-model="form.password"  minlength=5  ></el-input>
             </el-form-item>
           </el-col>
 
 
           <el-col :span="24">
-            <el-form-item label="重复密码">
+            <el-form-item label="Repeat Password">
               <el-input type="password" v-model="form.rePassword"  ></el-input>
             </el-form-item>
           </el-col>

@@ -7,13 +7,13 @@ package cn.enilu.flash.bean.enumeration.shop;
  */
 public class OrderEnum {
     public enum  OrderStatusEnum {
-        UN_PAY(1, "待付款"),
-        UN_SEND(2, "待发货"),
-        SENDED(3, "已发货"),
-        FINISHED(4, "已完成"),
-        CANCEL(5,"已取消"),
-        REFUND_ING(6,"退款中"),
-        REFUND(7,"已退款");
+        UN_PAY(1, "Payment pending"),
+        UN_SEND(2, "To be shipped"),
+        SENDED(3, "Shipped"),
+        FINISHED(4, "Completed"),
+        CANCEL(5,"Canceled"),
+        REFUND_ING(6,"Refund in progress"),
+        REFUND(7,"Refunded");
 
 
         private String value;
@@ -107,8 +107,8 @@ public class OrderEnum {
     }
 
     public enum  PayTypeEnum {
-        UN_PAY("alipay", "支付宝"),
-        UN_SEND("wxpay", "微信支付");
+        UN_PAY("alipay", "alipay"),
+        UN_SEND("wxpay", "wechat_pay");
 
 
         private String value;
@@ -139,9 +139,9 @@ public class OrderEnum {
 
 
     public enum  PayStatusEnum {
-        UN_PAY(1, "未付款"),
-        UN_SEND(2, "已付款"),
-        PAYING(3, "支付中");
+        UN_PAY(1, "Unpaid"),
+        UN_SEND(2, "Paid"),
+        PAYING(3, "In Payment");
 
 
         private String value;

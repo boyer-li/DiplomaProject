@@ -41,7 +41,7 @@
             <el-form-item label="编号">
               <span>{{ props.row.code }}</span>
             </el-form-item>
-            <el-form-item label="标题">
+            <el-form-item label="Title">
               <span>{{ props.row.title }}</span>
             </el-form-item>
             <el-form-item label="发送器">
@@ -68,7 +68,7 @@
           {{scope.row.code}}
         </template>
       </el-table-column>
-      <el-table-column label="标题">
+      <el-table-column label="Title">
         <template slot-scope="scope">
           {{scope.row.title}}
         </template>
@@ -118,7 +118,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="标题"  >
+            <el-form-item label="Title"  >
               <el-input v-model="form.title" minlength=1></el-input>
             </el-form-item>
           </el-col>

@@ -1,6 +1,6 @@
 export default {
   route: {
-    dashboard: 'Dashboard',
+    dashboard: 'Home',
     system: 'System',
     operationMgr: 'Operation',
     messageMgr: 'Message',
@@ -51,7 +51,7 @@ export default {
     size: 'Global Size'
   },
   login: {
-    title: 'tiny shop',
+    title: 'SHGTS Backend',
     errorAccount: 'Please enter the correct user name',
     errorPassword: 'The password can not be less than 5 digits',
     logIn: 'Log in',
