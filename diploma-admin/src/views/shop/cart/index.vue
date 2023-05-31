@@ -4,22 +4,22 @@
 
         <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
                   @current-change="handleCurrentChange">
-            <el-table-column label="用户">
+            <el-table-column label="User">
                 <template slot-scope="scope">
                     {{scope.row.user.mobile}}
                 </template>
             </el-table-column>
-            <el-table-column label="商品">
+            <el-table-column label="Used goods">
                 <template slot-scope="scope">
                     {{scope.row.title}}
                 </template>
             </el-table-column>
-          <el-table-column label="商品价格">
+          <el-table-column label="Product Price">
             <template slot-scope="scope">
               {{formatPrice(scope.row.price)}}
             </template>
           </el-table-column>
-            <el-table-column label="产品规格">
+            <el-table-column label="Product Specifications">
                 <template slot-scope="scope">
                     {{scope.row.specifications}}
                 </template>

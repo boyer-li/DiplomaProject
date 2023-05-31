@@ -17,8 +17,8 @@
         list-type="picture-card">
         <el-button size="small" type="primary">点击上传</el-button>
       </el-upload>
-      <el-button @click="dialogVisible = false">取 消</el-button>
-      <el-button type="primary" @click="handleSubmit">确 定</el-button>
+      <el-button @click="dialogVisible = false">Cancel</el-button>
+      <el-button type="primary" @click="handleSubmit">Confirm</el-button>
     </el-dialog>
   </div>
 </template>

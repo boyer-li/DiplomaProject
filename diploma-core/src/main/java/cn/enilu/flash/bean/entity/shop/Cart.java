@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @Table(appliesTo = "t_shop_cart",comment = "购物车")
 @Entity(name="t_shop_cart")
 public class Cart extends ShopBaseEntity {
-    @Column(name="id_user",columnDefinition = "BIGINT COMMENT '用户id'")
+    @Column(name="id_user",columnDefinition = "BIGINT COMMENT 'User id'")
     private Long idUser;
     @JoinColumn(name="id_user", insertable = false, updatable = false,foreignKey = @ForeignKey(name="none",value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.LAZY)

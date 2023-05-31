@@ -15,7 +15,7 @@ import javax.validation.constraints.NotBlank;
 @Data
 @EntityListeners(AuditingEntityListener.class)
 public class Channel extends BaseEntity {
-    @Column(columnDefinition = "VARCHAR(64) COMMENT '名称'")
+    @Column(columnDefinition = "VARCHAR(64) COMMENT 'Name'")
     @NotBlank(message = "名称不能为空")
     private String name;
     @Column(columnDefinition = "VARCHAR(64) COMMENT '编码'")

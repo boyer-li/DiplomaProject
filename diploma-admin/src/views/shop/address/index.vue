@@ -13,32 +13,32 @@
 
         <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
                   @current-change="handleCurrentChange">
-            <el-table-column label="用户id">
+            <el-table-column label="User id">
                 <template slot-scope="scope">
                     {{scope.row.idUser}}
                 </template>
             </el-table-column>
-            <el-table-column label="收件人">
+            <el-table-column label="Recipient">
                 <template slot-scope="scope">
                     {{scope.row.userName}}
                 </template>
             </el-table-column>
-            <el-table-column label="联系电话">
+            <el-table-column label="Contact number">
                 <template slot-scope="scope">
                     {{scope.row.mobile}}
                 </template>
             </el-table-column>
-            <el-table-column label="省">
+            <el-table-column label="Province">
                 <template slot-scope="scope">
                     {{scope.row.province}}
                 </template>
             </el-table-column>
-            <el-table-column label="市">
+            <el-table-column label="City">
                 <template slot-scope="scope">
                     {{scope.row.city}}
                 </template>
             </el-table-column>
-            <el-table-column label="区县">
+            <el-table-column label="District and County">
                 <template slot-scope="scope">
                     {{scope.row.district}}
                 </template>
@@ -48,12 +48,12 @@
                     {{scope.row.address}}
                 </template>
             </el-table-column>
-            <el-table-column label="邮政编码">
+            <el-table-column label="Postal Code">
                 <template slot-scope="scope">
                     {{scope.row.postCode}}
                 </template>
             </el-table-column>
-            <el-table-column label="是否默认">
+            <el-table-column label="Default or not">
                 <template slot-scope="scope">
                     {{scope.row.isDefault}}
                 </template>
@@ -80,32 +80,32 @@
             <el-form ref="form" :model="form" :rules="rules" label-width="150px">
                 <el-row>
                     <el-col :span="12">
-                        <el-form-item label="用户id"  >
+                        <el-form-item label="User id"  >
                             <el-input v-model="form.idUser" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="收件人"  >
+                        <el-form-item label="Recipient"  >
                             <el-input v-model="form.userName" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="联系电话"  >
+                        <el-form-item label="Contact number"  >
                             <el-input v-model="form.mobile" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="省"  >
+                        <el-form-item label="Province"  >
                             <el-input v-model="form.province" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="市"  >
+                        <el-form-item label="City"  >
                             <el-input v-model="form.city" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="区县"  >
+                        <el-form-item label="District and County"  >
                             <el-input v-model="form.district" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
@@ -115,12 +115,12 @@
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="邮政编码"  >
+                        <el-form-item label="Postal Code"  >
                             <el-input v-model="form.postCode" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="是否默认"  >
+                        <el-form-item label="Default or not"  >
                             <el-input v-model="form.isDefault" minlength=1></el-input>
                         </el-form-item>
                     </el-col>

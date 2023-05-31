@@ -54,7 +54,7 @@ public class CategoryController extends BaseController {
 		return Rets.success(categories);
 	}
 	@RequestMapping(method = RequestMethod.POST)
-	@BussinessLog(value = "编辑商品类别", key = "name")
+	@BussinessLog(value = "Edit Product Category", key = "name")
 	@RequiresPermissions(value = {Permission.CATEGORY_EDIT})
 	public Object save(@ModelAttribute Category category){
 		if(category.getId()==null){

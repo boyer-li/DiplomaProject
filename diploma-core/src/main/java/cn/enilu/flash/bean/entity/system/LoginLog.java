@@ -16,7 +16,7 @@ import java.util.Date;
  * @author enilu
  */
 @Entity(name="t_sys_login_log")
-@Table(appliesTo = "t_sys_login_log",comment = "登录日志")
+@Table(appliesTo = "t_sys_login_log",comment = "Login Log")
 @Data
 public class LoginLog {
     @Id

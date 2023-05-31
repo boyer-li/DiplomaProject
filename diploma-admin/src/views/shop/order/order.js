@@ -243,9 +243,9 @@ export default {
       })
     },
     addComment(id) {
-      this.$prompt('请输入备注信息', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消'
+      this.$prompt('请输入备注信息', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel'
       }).then(({value}) => {
         orderApi.addComment(id, value)
       }).catch(() => {

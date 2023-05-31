@@ -2,7 +2,7 @@
 
 
 ## 前言 
-- diploma-uniapp，是[SHGT System](http://diploma.enilu.cn/diploma/)的uniapp版本，通过uniapp技术达到一套代码覆盖全平台(H5,Android,IOS,微信小程序，其他如支付宝，qq，头条小程序也可以通过简单的适配实现)的目的
+- diploma-uniapp，Yes[SHGT System](http://diploma.enilu.cn/diploma/)的uniapp版本，通过uniapp技术达到一套代码覆盖全平台(H5,Android,IOS,微信小程序，其他如支付宝，qq，头条小程序也可以通过简单的适配实现)的目的
 - 项目地址[gitee](https://gitee.com/microapp/diploma-uniapp),[github](https://github.com/microapp-store/diploma-uniapp)
 - [官方文档：http://diploma.enilu.cn/diploma/](http://diploma.enilu.cn/diploma/ecosystem/uniapp.html)
 

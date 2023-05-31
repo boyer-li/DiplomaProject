@@ -9,7 +9,7 @@ import cn.enilu.flash.bean.entity.shop.ExpressInfo;
 public interface ExpressApi {
     /**
      * 查询快递实时信息
-     * @param orderNo 快递单号
+     * @param orderNo Courier Bill Number
      * @param companyCode 快递公司编码
      * @return
      */

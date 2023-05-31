@@ -3,7 +3,7 @@
     <div class="block">
       <el-row  :gutter="20">
         <el-col :span="6">
-            <el-select    size="mini" v-model="listQuery.disabled" filterable placeholder="请选择是否禁用">
+            <el-select    size="mini" v-model="listQuery.disabled" filterable placeholder="Please select whether to disable">
               <el-option
                 v-for="item in options"
                 :key="item.value"
@@ -18,9 +18,9 @@
             v-model="rangeDate"
             size="mini"
             type="datetimerange"
-            range-separator="至"
-            start-placeholder="发送起始日期"
-            end-placeholder="发送截至日期"
+            range-separator="to"
+            start-placeholder="Send start date"
+            end-placeholder="Sending Deadline"
             value-format="yyyyMMddHHmmss"
             align="right">
           </el-date-picker>
@@ -69,7 +69,7 @@
           </el-switch>
         </template>
       </el-table-column>
-      <el-table-column label="创建日期">
+      <el-table-column label="Creation Date">
         <template slot-scope="scope">
           {{scope.row.createTime}}
         </template>

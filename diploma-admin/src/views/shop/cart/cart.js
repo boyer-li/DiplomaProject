@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加购物车',
+      formTitle: 'Add Shopping Cart',
       isAdd: true,
       form: {
         idUser:'',

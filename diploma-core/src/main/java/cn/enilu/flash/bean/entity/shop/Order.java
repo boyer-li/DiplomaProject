@@ -20,33 +20,33 @@ import java.util.List;
 @Table(appliesTo = "t_shop_order",comment = "订单")
 @Entity(name="t_shop_order")
 public class Order extends ShopBaseEntity {
-    @Column(name="id_user",columnDefinition = "BIGINT COMMENT '用户id'")
+    @Column(name="id_user",columnDefinition = "BIGINT COMMENT 'User id'")
     private Long idUser;
     @JoinColumn(name="id_user", referencedColumnName="id",insertable = false, updatable = false,foreignKey = @ForeignKey(name="none",value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.LAZY)
     private ShopUser user;
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '订单号'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Order Number'")
     private String orderSn;
     /**
      * @see OrderEnum.OrderStatusEnum
      */
-    @Column(columnDefinition = "INT COMMENT '状态'")
+    @Column(columnDefinition = "INT COMMENT 'Status'")
     private Integer status;
     /**
-     * 收件人信息使用 下面三个字段(收件人，收件人电话，收件地址）代替
+     * 收件人信息使用 下面三个字段(Recipient，收件人电话，收件地址）代替
      */
     @Deprecated
-    @Column(name="id_address",columnDefinition = "BIGINT COMMENT '收货信息'")
+    @Column(name="id_address",columnDefinition = "BIGINT COMMENT 'Receiving Information'")
     private Long idAddress;
     /**
-     *  收件人信息使用 下面三个字段(收件人，收件人电话，收件地址）代替
+     *  收件人信息使用 下面三个字段(Recipient，收件人电话，收件地址）代替
      */
     @Deprecated
     @JoinColumn(name="id_address",  referencedColumnName="id",insertable = false, updatable = false,foreignKey = @ForeignKey(name="none",value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.LAZY)
     private Address address;
 
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '收件人'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Recipient'")
     private String consignee;
     @Column(columnDefinition = "VARCHAR(16) COMMENT '收件人电话'")
     private String mobile;
@@ -58,7 +58,7 @@ public class Order extends ShopBaseEntity {
     @org.hibernate.annotations.ForeignKey(name="none")
     @JsonManagedReference
     private List<OrderItem> items;
-    @Column(columnDefinition = "VARCHAR(64) COMMENT '订单备注'")
+    @Column(columnDefinition = "VARCHAR(64) COMMENT 'Order Remarks'")
     private String message;
     @Column(columnDefinition = "VARCHAR(256) COMMENT '管理员备注'")
     private String adminMessage;
@@ -66,20 +66,20 @@ public class Order extends ShopBaseEntity {
     private BigDecimal shippingAmount;
     @Column(columnDefinition = "VARCHAR(32) COMMENT '交易金额'")
     private BigDecimal tradeAmount;
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '总金额'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Total amount'")
     private BigDecimal totalPrice;
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '优惠券抵扣金额'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Coupon Credit Amount'")
     private BigDecimal couponPrice;
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '实付金额'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Actual amount paid'")
     private BigDecimal realPrice;
     @Column(columnDefinition = "DATETIME COMMENT '出库时间'")
     private Date shippingTime;
-    @Column(name="id_express",columnDefinition = "BIGINT COMMENT '快递公司'")
+    @Column(name="id_express",columnDefinition = "BIGINT COMMENT 'Courier Company'")
     private Long idExpress;
     @JoinColumn(name="id_express",  referencedColumnName="id",insertable = false, updatable = false,foreignKey = @ForeignKey(name="none",value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.LAZY)
     private Express express;
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '快递单号'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Courier Bill Number'")
     private String shippingSn;
     @Column(columnDefinition = "DATETIME COMMENT '确认收货时间'")
     private Date confirmReceivingTime;

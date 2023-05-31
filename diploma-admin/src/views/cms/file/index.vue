@@ -3,7 +3,7 @@
     <div class="block">
       <el-row  :gutter="20">
         <el-col :span="6">
-          <el-input v-model="listQuery.originalFileName" size="mini" placeholder="文件名"></el-input>
+          <el-input v-model="listQuery.originalFileName" size="mini" placeholder="File name"></el-input>
         </el-col>
 
         <el-col :span="6">
@@ -24,19 +24,19 @@
           {{scope.row.id}}
         </template>
       </el-table-column>
-      <el-table-column label="文件名">
+      <el-table-column label="File name">
         <template slot-scope="scope">
           {{scope.row.originalFileName}}
         </template>
       </el-table-column>
-      <el-table-column label="上传日期">
+      <el-table-column label="Upload date">
         <template slot-scope="scope">
           {{scope.row.createTime}}
         </template>
       </el-table-column>
-      <el-table-column labe="下载">
+      <el-table-column labe="Download">
         <template slot-scope="scope">
-          <el-button icon="el-icon-log" size="mini" @click.native="download(scope.row.id,scope.row.realFileName)">下载</el-button>
+          <el-button icon="el-icon-log" size="mini" @click.native="download(scope.row.id,scope.row.realFileName)">Download</el-button>
         </template>
       </el-table-column>
 

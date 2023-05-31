@@ -176,7 +176,7 @@ public class OrderService extends BaseService<Order, Long, OrderRepository> {
     }
 
     public void send(Order order) {
-        String descript = "管理员(" + JwtUtil.getUsername() + ")已发货";
+        String descript = "管理员(" + JwtUtil.getUsername() + ")Shipped";
         updateOrder(order);
         saveOrderLog(order, descript);
     }

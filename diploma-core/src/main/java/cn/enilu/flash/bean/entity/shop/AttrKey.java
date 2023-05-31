@@ -19,7 +19,7 @@ import java.util.List;
 @Entity(name="t_shop_attr_key")
 @EntityListeners(AuditingEntityListener.class)
 public class AttrKey extends BaseEntity {
-    @Column(name="attr_name",columnDefinition = "VARCHAR(32) COMMENT '属性名'")
+    @Column(name="attr_name",columnDefinition = "VARCHAR(32) COMMENT 'Property Name'")
     private String attrName;
     @Column(name="id_category",columnDefinition = "BIGINT COMMENT '商品类别id'")
     private Long idCategory;

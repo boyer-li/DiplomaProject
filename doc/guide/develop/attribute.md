@@ -50,7 +50,7 @@
 {
     "goods":{
         "descript":"5000mAh超长续航",
-        "detail":"商品详情",
+        "detail":"Product Details",
         "gallery":"81,82,83,84",
         "id":"1",
         "idCategory":"1",
@@ -95,11 +95,11 @@
         ],
         "list":[//商品sku列表
             {
-                "price":69900,//价格
+                "price":69900,//Price
                 "id":"1",
                 "s1":"1",//表示id为1的规格名(版本）对应的的规格值的id是1(3GB+32GB)
                 "s2":"3",//表示id为2的规格名（颜色）对应的的规格值的id是3(珊瑚橙)
-                "stock_num":100 //库存
+                "stock_num":100 //Inventory
             },
             {
                 "price":69900,

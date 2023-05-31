@@ -15,7 +15,7 @@
                      class="footer_btn">
                     <van-button size="small" type="default" @click="contact">Contact Customer Service</van-button>
                     <van-button size="small" type="danger" @click="payment" v-show="order.statusName=='Payment pending'">Pay Now</van-button>
-                    <van-button size="small" type="danger" @click="confirmReceive" v-show="order.statusName=='已发货'">Confirm receipt</van-button>
+                    <van-button size="small" type="danger" @click="confirmReceive" v-show="order.statusName=='Shipped'">Confirm receipt</van-button>
                 </div>
             </van-panel>
             <van-panel :title="'Order Number: ' + order.orderSn">

@@ -4,7 +4,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加订单明细',
+      formTitle: 'Add order details',
       isAdd: true,
       form: {
         idOrder:'',
@@ -107,7 +107,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加订单明细',
+      this.formTitle = 'Add order details',
       this.formVisible = true
       this.isAdd = true
     },

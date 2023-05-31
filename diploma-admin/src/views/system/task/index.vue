@@ -56,16 +56,16 @@
           {{scope.row.execResult}}
         </template>
       </el-table-column>
-      <el-table-column label="操作" width="280" align="center">
+      <el-table-column label="Operation" width="280" align="center">
         <template slot-scope="scope">
 
           <el-button type="text" size="mini" icon="el-icon-edit" @click.native="editItem(scope.row)" v-permission="['/task/update']">{{ $t('button.edit') }}</el-button>
           <el-button type="text" size="mini" icon="el-icon-delete" @click.native="removeItem(scope.row)" v-permission="['/task/delete']">{{ $t('button.delete') }}</el-button>
         <el-button type="text" icon="el-icon-tickets" size="mini" @click.native="viewLog(scope.row.id)">查看日志</el-button>
           <el-button type="text" icon="el-icon-turn-off" size="mini" @click.native="enable(scope.row.id)" v-permission="['/task/update']"
-                     v-if="scope.row.disabled===true" style="color:gray;">启用</el-button>
+                     v-if="scope.row.disabled===true" style="color:gray;">Enable</el-button>
           <el-button type="text" icon="el-icon-open" size="mini" @click.native="disable(scope.row.id)" v-permission="['/task/update']"
-                     v-if="scope.row.disabled===false" style="color:green;">禁用</el-button>
+                     v-if="scope.row.disabled===false" style="color:green;">Disable</el-button>
           <el-button type="text" icon="el-icon-caret-right" size="mini" @click.native="runOnce(scope.row.id)" v-permission="['/task/update']">立即执行一次</el-button>
         </template>
       </el-table-column>

@@ -1,7 +1,7 @@
 package cn.enilu.flash.bean.enumeration.shop;
 
 /**
- * 订单状态
+ * Order Status
  * @author ：enilu
  * @date ：Created in 11/6/2019 3:15 PM
  */

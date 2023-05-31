@@ -4,7 +4,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加规格名',
+      formTitle: 'Add specification name',
       deptList: [],
       roleList: [],
       isAdd: true,
@@ -18,8 +18,8 @@ export default {
       },
       rules: {
         name: [
-          { required: true, message: '请输入规格名名称', trigger: 'blur' },
-          { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
+          { required: true, message: 'Please enter the name of the specification', trigger: 'blur' },
+          { min: 2, max: 20, message: 'Length from 2 to 20 characters', trigger: 'blur' }
         ]
 
       },
@@ -88,7 +88,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加规格名'
+      this.formTitle = 'Add specification name'
       this.formVisible = true
       this.isAdd = true
     },
@@ -105,7 +105,7 @@ export default {
           if (this.form.id !== '') {
             update({ id: self.form.id, dictName: dictName, dictValues: dictValues }).then(response => {
               this.$message({
-                message: '提交成功',
+                message: 'Submitted successfully',
                 type: 'success'
               })
               self.fetchData()
@@ -114,7 +114,7 @@ export default {
           } else {
             save({ dictName: dictName, dictValues: dictValues }).then(response => {
               this.$message({
-                message: '提交成功',
+                message: 'Submitted successfully',
                 type: 'success'
               })
               self.fetchData()
@@ -131,7 +131,7 @@ export default {
         return true
       }
       this.$message({
-        message: '请选中操作项',
+        message: 'Please check the operation item',
         type: 'warning'
       })
       return false
@@ -139,7 +139,7 @@ export default {
     edit() {
       if (this.checkSel()) {
         this.isAdd = false
-        this.formTitle = '修改规格名'
+        this.formTitle = 'Modify specification name'
         var detail = this.selRow.detail.split(',')
         var details = []
         detail.forEach(function(val, index) {
@@ -154,14 +154,14 @@ export default {
       if (this.checkSel()) {
         var id = this.selRow.id
 
-        this.$confirm('确定删除该记录?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
+        this.$confirm('Sure to delete?', 'Tips', {
+          confirmButtonText: 'Confirm',
+          cancelButtonText: 'Cancel',
           type: 'warning'
         }).then(() => {
           remove(id).then(response => {
             this.$message({
-              message: '操作成功',
+              message: 'Successful operation',
               type: 'success'
             })
             this.fetchData()

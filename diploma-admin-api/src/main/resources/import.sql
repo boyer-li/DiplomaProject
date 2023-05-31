@@ -202,7 +202,7 @@ INSERT INTO `t_shop_order_log` (`id`, `create_time`, `modify_time`, `descript`, 
 INSERT INTO `t_shop_order_log` (`id`, `create_time`, `modify_time`, `descript`, `id_order`) VALUES (28, '2020-2-12 21:17:58', '2020-2-12 21:17:58', '用户已付款', 8);
 INSERT INTO `t_shop_order_log` (`id`, `create_time`, `modify_time`, `descript`, `id_order`) VALUES (29, '2020-2-12 21:20:04', '2020-2-12 21:20:04', '用户已付款', 11);
 INSERT INTO `t_shop_order_log` (`id`, `create_time`, `modify_time`, `descript`, `id_order`) VALUES (30, '2020-2-12 21:45:33', '2020-2-12 21:45:33', '用户已付款', 10);
-INSERT INTO `t_shop_order_log` (`id`, `create_time`, `modify_time`, `descript`, `id_order`) VALUES (31, '2020-2-12 22:04:43', '2020-2-12 22:04:43', '管理员(admin)已发货', 10);
+INSERT INTO `t_shop_order_log` (`id`, `create_time`, `modify_time`, `descript`, `id_order`) VALUES (31, '2020-2-12 22:04:43', '2020-2-12 22:04:43', '管理员(admin)Shipped', 10);
 
 -- ----------------------------
 -- Records of t_shop_order_item.sql
@@ -268,22 +268,22 @@ INSERT INTO `t_sys_dept` (`id`, `create_by`, `create_time`, `modify_by`, `modify
 -- ----------------------------
 -- Records of t_sys_dict.sql
 -- ----------------------------
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (16, 1, '2019-1-13 14:18:21', NULL, NULL, '状态', '0', 0, NULL);
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (17, 1, '2019-1-13 14:18:21', NULL, NULL, '启用', '1', 16, NULL);
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (18, 1, '2019-1-13 14:18:21', NULL, NULL, '禁用', '2', 16, NULL);
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (29, 1, '2019-1-13 14:18:21', NULL, NULL, '性别', '0', 0, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (16, 1, '2019-1-13 14:18:21', NULL, NULL, 'Status', '0', 0, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (17, 1, '2019-1-13 14:18:21', NULL, NULL, 'Enable', '1', 16, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (18, 1, '2019-1-13 14:18:21', NULL, NULL, 'Disable', '2', 16, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (29, 1, '2019-1-13 14:18:21', NULL, NULL, 'Gender', '0', 0, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (30, 1, '2019-1-13 14:18:21', NULL, NULL, '男', '1', 29, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (31, 1, '2019-1-13 14:18:21', NULL, NULL, '女', '2', 29, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (35, 1, '2019-1-13 14:18:21', NULL, NULL, '账号状态', '0', 0, NULL);
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (36, 1, '2019-1-13 14:18:21', NULL, NULL, '启用', '1', 35, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (36, 1, '2019-1-13 14:18:21', NULL, NULL, 'Enable', '1', 35, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (37, 1, '2019-1-13 14:18:21', NULL, NULL, '冻结', '2', 35, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (38, 1, '2019-1-13 14:18:21', NULL, NULL, '已删除', '3', 35, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (53, 1, '2019-1-13 14:18:21', NULL, NULL, '证件类型', '0', 0, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (54, 1, '2019-1-13 14:18:21', NULL, NULL, '身份证', '1', 53, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (55, 1, '2019-1-13 14:18:21', NULL, NULL, '护照', '2', 53, NULL);
 INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (68, 1, '2019-1-13 14:18:21', 1, '2019-1-13 14:18:21', '是否', '0', 0, NULL);
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (69, 1, '2019-1-13 14:18:21', 1, '2019-1-13 14:18:21', '是', '1', 68, NULL);
-INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (70, 1, '2019-1-13 14:18:21', 1, '2019-1-13 14:18:21', '否', '0', 68, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (69, 1, '2019-1-13 14:18:21', 1, '2019-1-13 14:18:21', 'Yes', '1', 68, NULL);
+INSERT INTO `t_sys_dict` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `name`, `num`, `pid`, `tips`) VALUES (70, 1, '2019-1-13 14:18:21', 1, '2019-1-13 14:18:21', 'No', '0', 68, NULL);
 
 -- ----------------------------
 -- Records of t_sys_file_info.sql
@@ -434,8 +434,8 @@ INSERT INTO `t_sys_file_info` (`id`, `create_by`, `create_time`, `modify_by`, `m
 -- ----------------------------
 -- Records of t_sys_login_log.sql
 -- ----------------------------
-INSERT INTO `t_sys_login_log` (`id`, `create_time`, `ip`, `logname`, `message`, `succeed`, `userid`) VALUES (1, '2019-11-18 20:05:52', '127.0.0.1', '登录日志', NULL, '成功', 1);
-INSERT INTO `t_sys_login_log` (`id`, `create_time`, `ip`, `logname`, `message`, `succeed`, `userid`) VALUES (2, '2019-11-20 10:45:10', '127.0.0.1', '登录日志', NULL, '成功', 1);
+INSERT INTO `t_sys_login_log` (`id`, `create_time`, `ip`, `logname`, `message`, `succeed`, `userid`) VALUES (1, '2019-11-18 20:05:52', '127.0.0.1', 'Login Log', NULL, 'Success', 1);
+INSERT INTO `t_sys_login_log` (`id`, `create_time`, `ip`, `logname`, `message`, `succeed`, `userid`) VALUES (2, '2019-11-20 10:45:10', '127.0.0.1', 'Login Log', NULL, 'Success', 1);
 
 -- ----------------------------
 -- Records of t_sys_menu.sql
@@ -444,7 +444,7 @@ INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (2, 1, '2019-7-31 22:04:30', 1, '2019-3-11 22:25:38', 'cms', 'layout', 0, 'documentation', 1, NULL, 1, 'CMS管理', 3, '0', '[0],', NULL, '/cms');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (3, 1, '2019-7-31 22:04:30', 1, '2019-6-2 10:09:09', 'operationMgr', 'layout', 0, 'operation', 1, NULL, 1, '运维管理', 6, '0', '[0],', NULL, '/optionMgr');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (4, 1, '2019-7-31 22:04:30', 1, '2019-4-16 18:59:15', 'mgr', 'views/system/user/index', 0, 'user', 1, NULL, 2, '用户管理', 1, 'system', '[0],[system],', NULL, '/mgr');
-INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (5, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'mgrAdd', NULL, 0, NULL, 0, NULL, 3, '添加用户', 1, 'mgr', '[0],[system],[mgr],', NULL, '/mgr/add');
+INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (5, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'mgrAdd', NULL, 0, NULL, 0, NULL, 3, 'Add User', 1, 'mgr', '[0],[system],[mgr],', NULL, '/mgr/add');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (6, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'mgrEdit', NULL, 0, NULL, 0, NULL, 3, '修改用户', 2, 'mgr', '[0],[system],[mgr],', NULL, '/mgr/edit');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (7, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'mgrDelete', NULL, 0, NULL, 0, 0, 3, '删除用户', 3, 'mgr', '[0],[system],[mgr],', NULL, '/mgr/delete');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (8, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'mgrReset', NULL, 0, NULL, 0, 0, 3, '重置密码', 4, 'mgr', '[0],[system],[mgr],', NULL, '/mgr/reset');
@@ -487,8 +487,8 @@ INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (45, 1, '2019-3-19 10:25:05', 1, '2019-3-19 10:25:05', 'file', 'views/cms/file/index', 0, 'file', 1, NULL, 2, '文件存储', 7, 'shopMgr', '[0],[shopMgr],', NULL, '/fileMgr');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (46, 1, '2019-3-11 22:30:17', 1, '2019-3-11 22:30:17', 'editArticle', 'views/cms/article/edit.vue', 0, 'articleEdit', 1, NULL, 2, '新建文章', 1, 'cms', '[0],[cms],', NULL, '/cms/articleEdit');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (47, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'taskLog', 'views/system/task/taskLog', 1, 'task', 1, NULL, 2, '任务日志', 4, 'system', '[0],[system],', NULL, '/taskLog');
-INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (48, 1, '2019-7-31 22:04:30', 1, '2019-6-2 10:25:31', 'log', 'views/operation/log/index', 0, 'log', 1, NULL, 2, '业务日志', 6, 'operationMgr', '[0],[operationMgr],', NULL, '/log');
-INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (49, 1, '2019-7-31 22:04:30', 1, '2019-6-2 10:25:36', 'loginLog', 'views/operation/loginLog/index', 0, 'logininfor', 1, NULL, 2, '登录日志', 6, 'operationMgr', '[0],[operationMgr],', NULL, '/loginLog');
+INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (48, 1, '2019-7-31 22:04:30', 1, '2019-6-2 10:25:31', 'log', 'views/operation/log/index', 0, 'log', 1, NULL, 2, 'Business Log', 6, 'operationMgr', '[0],[operationMgr],', NULL, '/log');
+INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (49, 1, '2019-7-31 22:04:30', 1, '2019-6-2 10:25:36', 'loginLog', 'views/operation/loginLog/index', 0, 'logininfor', 1, NULL, 2, 'Login Log', 6, 'operationMgr', '[0],[operationMgr],', NULL, '/loginLog');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (50, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'logClear', NULL, 0, NULL, 0, NULL, 3, '清空日志', 3, 'log', '[0],[system],[log],', NULL, '/log/delLog');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (51, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'logDetail', NULL, 0, NULL, 0, NULL, 3, '日志详情', 3, 'log', '[0],[system],[log],', NULL, '/log/detail');
 INSERT INTO `t_sys_menu` (`id`, `create_by`, `create_time`, `modify_by`, `modify_time`, `code`, `component`, `hidden`, `icon`, `ismenu`, `isopen`, `levels`, `name`, `num`, `pcode`, `pcodes`, `tips`, `url`) VALUES (52, 1, '2019-7-31 22:04:30', 1, '2019-7-31 22:04:30', 'loginLogClear', NULL, 0, NULL, 0, NULL, 3, '清空登录日志', 1, 'loginLog', '[0],[system],[loginLog],', NULL, '/loginLog/delLoginLog');

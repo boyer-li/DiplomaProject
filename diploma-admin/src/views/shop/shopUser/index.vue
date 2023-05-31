@@ -3,20 +3,20 @@
     <div class="block">
       <el-row  :gutter="20">
         <el-col :span="4">
-          <el-input v-model="listQuery.mobile" size="mini" placeholder="手机号"></el-input>
+          <el-input v-model="listQuery.mobile" size="mini" placeholder="Phone number"></el-input>
         </el-col>
         <el-col :span="4">
-          <el-input v-model="listQuery.nickName" size="mini"  placeholder="昵称"></el-input>
+          <el-input v-model="listQuery.nickName" size="mini"  placeholder="Nickname"></el-input>
         </el-col>
         <el-col :span="8">
           <el-date-picker
             v-model="regDate"
             size="mini"
             type="daterange"
-            range-separator="至"
+            range-separator="to"
             value-format="yyyy-MM-dd"
-            start-placeholder="注册开始日期"
-            end-placeholder="注册截至日期">
+            start-placeholder="Registration Start Date"
+            end-placeholder="Registration Deadline">
           </el-date-picker>
         </el-col>
         <el-col :span="8">
@@ -24,10 +24,10 @@
             v-model="lastLoginTime"
             size="mini"
             type="daterange"
-            range-separator="至"
+            range-separator="to"
             value-format="yyyy-MM-dd"
-            start-placeholder="最近登录开始日期"
-            end-placeholder="最近登录截至日期">
+            start-placeholder="Last login start date"
+            end-placeholder="Last login date">
           </el-date-picker>
         </el-col>
       </el-row>
@@ -46,17 +46,17 @@
           {{scope.row.id}}
         </template>
       </el-table-column>
-      <el-table-column label="头像">
+      <el-table-column label="Avatar">
         <template slot-scope="scope">
           <el-avatar   :src="scope.row.img"></el-avatar>
         </template>
       </el-table-column>
-      <el-table-column label="昵称">
+      <el-table-column label="Nickname">
         <template slot-scope="scope">
           {{scope.row.nickName}}
         </template>
       </el-table-column>
-      <el-table-column label="手机号">
+      <el-table-column label="Phone number">
         <template slot-scope="scope">
           <router-link :to="{path:'shopUserDetail?id='+scope.row.id}">
             {{scope.row.mobile}}
@@ -64,17 +64,17 @@
 
         </template>
       </el-table-column>
-      <el-table-column label="性别">
+      <el-table-column label="Gender">
         <template slot-scope="scope">
           {{scope.row.gender}}
         </template>
       </el-table-column>
-      <el-table-column label="注册时间">
+      <el-table-column label="Registration Time">
         <template slot-scope="scope">
           {{scope.row.createTime}}
         </template>
       </el-table-column>
-      <el-table-column label="最后登陆时间">
+      <el-table-column label="Last login time">
         <template slot-scope="scope">
           {{scope.row.lastLoginTime}}
         </template>

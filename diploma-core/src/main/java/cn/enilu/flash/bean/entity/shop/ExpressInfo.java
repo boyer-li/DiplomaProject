@@ -36,11 +36,11 @@ public class ExpressInfo extends BaseEntity {
 
     @Column(name = "id_order", columnDefinition = "BIGINT COMMENT '所属订单id'")
     private Long idOrder;
-    @Column(name="shipping_sn",columnDefinition = "VARCHAR(32) COMMENT '快递单号'")
+    @Column(name="shipping_sn",columnDefinition = "VARCHAR(32) COMMENT 'Courier Bill Number'")
     private String shippingSn;
-    @Column(name="express_company",columnDefinition = "VARCHAR(32) COMMENT '快递公司'")
+    @Column(name="express_company",columnDefinition = "VARCHAR(32) COMMENT 'Courier Company'")
     private String expressCompany;
-    @Column(name = "state", columnDefinition = "INT COMMENT '状态:0在途中,1:已签收,-1问题件'")
+    @Column(name = "state", columnDefinition = "INT COMMENT 'Status:0在途中,1:已签收,-1问题件'")
     private Integer state;
     @Column(name="info",columnDefinition = "TEXT COMMENT '详细信息'")
     private String info;

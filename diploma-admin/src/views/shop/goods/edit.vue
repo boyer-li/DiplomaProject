@@ -11,10 +11,10 @@
     <br>
     <div class="block">
       <el-steps :active="active" finish-status="success">
-        <el-step title="基本信息"></el-step>
-        <el-step title="商品相册"></el-step>
-        <el-step title="商品详情"></el-step>
-        <el-step title="上架信息"></el-step>
+        <el-step title="Basic Information"></el-step>
+        <el-step title="Product Album"></el-step>
+        <el-step title="Product Details"></el-step>
+        <el-step title="Uploaded information"></el-step>
       </el-steps>
     </div>
 
@@ -22,33 +22,33 @@
     <el-form  :model="form"   label-width="150px" v-show="active==0">
       <el-row>
         <el-col :span="24">
-          <el-form-item label="名称">
+          <el-form-item label="Name">
             <el-input v-model="form.name" minlength=1></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <el-form-item label="产品简介">
+          <el-form-item label="Product Description">
             <el-input v-model="form.descript" minlength=1></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <el-form-item label="类别">
+          <el-form-item label="Category">
             <treeselect v-model="form.idCategory"  :options="categories"  placeholder="请选择商品类别"/>
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <el-form-item label="是否新品">
+          <el-form-item label="New or old">
             <el-radio-group v-model="form.isNew">
-              <el-radio :label="true">是</el-radio>
-              <el-radio :label="false">否</el-radio>
+              <el-radio :label="true">Yes</el-radio>
+              <el-radio :label="false">No</el-radio>
             </el-radio-group>
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <el-form-item label="是否热卖">
+          <el-form-item label="Hot or not">
             <el-radio-group v-model="form.isHot">
-              <el-radio :label="true">是</el-radio>
-              <el-radio :label="false">否</el-radio>
+              <el-radio :label="true">Yes</el-radio>
+              <el-radio :label="false">No</el-radio>
             </el-radio-group>
           </el-form-item>
         </el-col>
@@ -61,7 +61,7 @@
       <el-row>
 
         <el-col :span="24">
-          <el-form-item label="商品缩略图">
+          <el-form-item label="Product Thumbnails">
             <el-upload
               :headers="uploadHeaders"
               :action="uploadUrl"
@@ -76,7 +76,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <el-form-item label="商品相册">
+          <el-form-item label="Product Album">
               <el-upload
                 list-type="picture-card"
                 :action="uploadUrl"
@@ -106,53 +106,53 @@
 
 
         <el-col :span="24">
-          <el-form-item label="商品规格">
-            <el-radio class="radio" v-model="spec" label="one">单规格</el-radio>
+          <el-form-item label="Product specifications">
+            <el-radio class="radio" v-model="spec" label="one">Single specification</el-radio>
             <el-radio class="radio" v-model="spec" label="more" v-show="attrKeyList.length>0">多规格</el-radio>
           </el-form-item>
         </el-col>
         <el-col :span="24" v-if="spec == 'one'">
-          <el-form-item label="库存">
+          <el-form-item label="Inventory">
             <el-input-number v-model="form.stock" :min="0" :max="100000"></el-input-number>
           </el-form-item>
-          <el-form-item label="市场价(分)">
+          <el-form-item label="Market price(ruble)">
             <el-input-number v-model="form.marketingPrice" :min="0" :max="10000000"></el-input-number>
           </el-form-item>
-          <el-form-item label="价格(分)">
+          <el-form-item label="Price(ruble)">
             <el-input-number v-model="form.price" :min="0" :max="10000000"></el-input-number>
           </el-form-item>
         </el-col>
         <el-col  :offset="3" :span="18" v-else style="overflow: auto; text-align: center;">
-          <el-button type="primary" @click="openAddSkuForm" style="margin-bottom: 10px;">添加规格</el-button>
+          <el-button type="primary" @click="openAddSkuForm" style="margin-bottom: 10px;">Add specifications</el-button>
           <el-table
             :data="skuList"
             style="margin-bottom: 20px;"
             :row-class-name="tableRowClassName">
             <el-table-column
               prop="codeName"
-              label="规格">
+              label="Specification">
             </el-table-column>
             <el-table-column
               prop="marketingPrice"
-              label="市场价">
+              label="Market Price">
             </el-table-column>
 
             <el-table-column
               prop="price"
-              label="价格(分)">
+              label="Price(ruble)">
             </el-table-column>
 
             <el-table-column
               prop="stock"
-              label="库存">
+              label="Inventory">
             </el-table-column>
 
-            <el-table-column label="操作">
+            <el-table-column label="Operation">
               <template slot-scope="scope">
                 <el-button
                   size="small"
                   type="danger"
-                  @click="removeSku(scope.$index)">删除
+                  @click="removeSku(scope.$index)">Delete
                 </el-button>
               </template>
             </el-table-column>
@@ -161,10 +161,10 @@
         </el-col>
       </el-row>
     </el-form>
-    <el-dialog title="SKU配置" :visible.sync="specDialogFormVisible">
+    <el-dialog title="SKU Configuration" :visible.sync="specDialogFormVisible">
       <el-form :model="skuForm">
 
-            <el-form-item label="已选规格" label-width="100px" prop="specs">
+            <el-form-item label="Selected specifications" label-width="100px" prop="specs">
             <el-tag
               v-for="tag in tags"
               :key="tag.id"
@@ -177,14 +177,14 @@
 
         <el-row>
           <el-col :span="8">
-            <el-form-item label="属性名" label-width="100px"  >
+            <el-form-item label="Property Name" label-width="100px"  >
               <el-select
                 v-model="attrKeySel"
                 filterable
                 allow-create
                 default-first-option
                 @change="changeAttrKey"
-                placeholder="属性名">
+                placeholder="Property Name">
                 <el-option
                   v-for="item in attrKeyList"
                   :key="item.id"
@@ -196,13 +196,13 @@
             </el-form-item>
           </el-col>
           <el-col :span="8">
-            <el-form-item label="属性值" label-width="100px"  >
+            <el-form-item label="Attribute Value" label-width="100px"  >
               <el-select
                 v-model="attrValSel"
                 filterable
                 allow-create
                 default-first-option
-                placeholder="属性值">
+                placeholder="Attribute Value">
                 <el-option
                   v-for="item in attrValListSel"
                   :key="item.id"
@@ -214,23 +214,23 @@
             </el-form-item>
           </el-col>
           <el-col :offset="2" :span="6">
-            <el-button type="success" @click="addToTag">添加规格</el-button>
+            <el-button type="success" @click="addToTag">Add specifications</el-button>
           </el-col>
         </el-row>
 
-        <el-form-item label="市场价(分)" label-width="100px">
+        <el-form-item label="Market price (ruble)" label-width="100px">
           <el-input-number v-model="skuForm.marketingPrice" :min="0" :max="100000"></el-input-number>
         </el-form-item>
-        <el-form-item label="价格(分)" label-width="100px">
+        <el-form-item label="Price(分)" label-width="100px">
           <el-input-number v-model="skuForm.price" :min="0" :max="1000000"></el-input-number>
         </el-form-item>
-        <el-form-item label="库存" label-width="100px">
+        <el-form-item label="Inventory" label-width="100px">
           <el-input-number v-model="skuForm.stock" :min="0" :max="100000"></el-input-number>
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button type="default" @click="closeAddSkuForm">取 消</el-button>
-        <el-button type="primary" @click="addSku">确 定</el-button>
+        <el-button type="default" @click="closeAddSkuForm">Cancel</el-button>
+        <el-button type="primary" @click="addSku">Confirm</el-button>
       </div>
     </el-dialog>
     <br>

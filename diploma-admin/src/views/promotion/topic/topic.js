@@ -26,8 +26,8 @@ export default {
         disabled: ''
       },
       options: [
-        {label: '是', value: 1},
-        {label: '否', value: 0}
+        {label: 'Yes', value: 1},
+        {label: 'No', value: 0}
       ],
       rangeDate: '',
       total: 0,
@@ -197,7 +197,7 @@ export default {
             this.fetchData()
           }).catch(err => {
             this.$notify.error({
-              title: '错误',
+              title: 'Error',
               message: err
             })
           })

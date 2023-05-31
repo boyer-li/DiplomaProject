@@ -8,8 +8,8 @@ package cn.enilu.flash.bean.constant.state;
  */
 public enum MenuStatus {
 
-    ENABLE(1, "启用"),
-    DISABLE(0, "禁用");
+    ENABLE(1, "Enable"),
+    DISABLE(0, "Disable");
 
     int code;
     String message;

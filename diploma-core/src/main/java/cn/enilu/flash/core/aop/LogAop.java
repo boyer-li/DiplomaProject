@@ -94,7 +94,7 @@ public class LogAop {
 
         //如果涉及到修改,比对变化
         String msg="";
-        if (bussinessName.indexOf("修改") != -1 || bussinessName.indexOf("编辑") != -1) {
+        if (bussinessName.indexOf("修改") != -1 || bussinessName.indexOf("Editor") != -1) {
             Object obj1 = LogObjectHolder.me().get();
             Map<String, String> obj2 = HttpUtil.getRequestParameters();
             try {

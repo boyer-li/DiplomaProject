@@ -30,7 +30,7 @@ export default {
         ],
         fullname: [
           { required: true, message: '请输入编码', trigger: 'blur' },
-          { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
+          { min: 2, max: 20, message: 'Length from 2 to 20 characters', trigger: 'blur' }
         ],
         num: [
           { required: true, message: '请输入排序', trigger: 'blur' }
@@ -56,7 +56,7 @@ export default {
         return true
       }
       this.$message({
-        message: '请选中操作项',
+        message: 'Please check the operation item',
         type: 'warning'
       })
       return false
@@ -77,7 +77,7 @@ export default {
           save(menuData).then(response => {
             console.log(response)
             this.$message({
-              message: '提交成功',
+              message: 'Submitted successfully',
               type: 'success'
             })
             self.fetchData()
@@ -99,7 +99,7 @@ export default {
         if (this.checkSel()) {
         this.isAdd = false
         this.form = Object.assign({}, this.selRow);
-        this.form.statusBool = this.form.statusName === '启用'
+        this.form.statusBool = this.form.statusName === 'Enable'
         this.form.password = ''
         this.formTitle = '修改用户'
         this.formVisible = true
@@ -111,15 +111,15 @@ export default {
     },
     remove() {
       if(this.checkSel()) {
-        this.$confirm('确定删除该记录?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
+        this.$confirm('Sure to delete?', 'Tips', {
+          confirmButtonText: 'Confirm',
+          cancelButtonText: 'Cancel',
           type: 'warning'
         }).then(() => {
           const row = this.selRow
           del(row.id).then(response => {
             this.$message({
-              message: '删除成功',
+              message: 'Deleted successfully',
               type: 'success'
             })
             this.fetchData()

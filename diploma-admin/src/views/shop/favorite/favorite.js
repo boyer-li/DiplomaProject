@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加用户收藏',
+      formTitle: 'Add user favorites',
       isAdd: true,
       form: {
         idUser:'',
@@ -104,7 +104,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加用户收藏',
+      this.formTitle = 'Add user favorites',
       this.formVisible = true
       this.isAdd = true
     },
@@ -142,7 +142,7 @@ export default {
       if (this.checkSel()) {
         this.isAdd = false
         this.form = this.selRow
-        this.formTitle = '编辑用户收藏'
+        this.formTitle = 'Edit User Favorites'
         this.formVisible = true
       }
     },
@@ -162,7 +162,7 @@ export default {
             this.fetchData()
           }).catch( err=> {
             this.$notify.error({
-              title: '错误',
+              title: 'Error',
               message: err
             })
           })

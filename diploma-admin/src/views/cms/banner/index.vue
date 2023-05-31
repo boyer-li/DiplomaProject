@@ -37,7 +37,7 @@
           {{scope.row.title}}
         </template>
       </el-table-column>
-      <el-table-column label="类别">
+      <el-table-column label="Category">
         <template slot-scope="scope">
           {{scope.row.type}}
         </template>
@@ -52,7 +52,7 @@
           {{scope.row.param}}
         </template>
       </el-table-column>
-      <el-table-column label="图片">
+      <el-table-column label="Pictures">
         <template slot-scope="scope">
           <img :src="scope.row.img" style="width:200px;">
         </template>

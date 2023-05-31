@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Entity(name="t_shop_favorite")
 @Table(appliesTo = "t_shop_favorite",comment = "用户收藏")
 public class Favorite extends ShopBaseEntity {
-    @Column(name="id_user",columnDefinition = "BIGINT COMMENT '用户id'")
+    @Column(name="id_user",columnDefinition = "BIGINT COMMENT 'User id'")
     private Long idUser;
     @JoinColumn(name="id_user", insertable = false, updatable = false,foreignKey = @ForeignKey(name="none",value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.LAZY)

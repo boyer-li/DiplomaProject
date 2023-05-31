@@ -20,7 +20,7 @@ import javax.persistence.*;
 public class AttrVal extends BaseEntity {
     @Column(name="id_attr_key",columnDefinition = "BIGINT COMMENT '属性id'")
     private Long idAttrKey;
-    @Column(name="attr_val",columnDefinition = "VARCHAR(32) COMMENT '属性值'")
+    @Column(name="attr_val",columnDefinition = "VARCHAR(32) COMMENT 'Attribute Value'")
     private String attrVal;
     @JoinColumn(name = "id_attr_key", insertable = false, updatable = false, foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.LAZY)

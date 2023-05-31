@@ -99,7 +99,7 @@ export default {
     changeIsOnSale(data){
       goodsApi.changeIsOnSale(data.id,data.isOnSale).then( response =>{
         this.$message({
-          message: data.isOnSale?'上架成功':'下架成功',
+          message: data.isOnSale?'Uploaded successfully':'Downgraded successfully',
           type: 'success'
         })
       })

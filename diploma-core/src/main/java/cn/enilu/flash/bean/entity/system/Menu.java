@@ -28,17 +28,17 @@ public class Menu  extends BaseEntity {
     private String pcode;
     @Column(columnDefinition = "VARCHAR(128) COMMENT '递归父级菜单编号'")
     private String pcodes;
-    @Column(columnDefinition = "VARCHAR(64) COMMENT '名称'", nullable = false)
+    @Column(columnDefinition = "VARCHAR(64) COMMENT 'Name'", nullable = false)
     @NotBlank(message = "名称不能为空")
     private String name;
-    @Column(columnDefinition = "VARCHAR(32) COMMENT '图标'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT 'Icon'")
     private String icon;
     /**
      * 如果当前配置为非菜单（按钮）也需要配置链接，v-permission使用该配置，且不能与其他url重复
      */
     @Column(columnDefinition = "VARCHAR(32) COMMENT '资源/权限标识'")
     private String url;
-    @Column(columnDefinition = "INT COMMENT '顺序'", nullable = false)
+    @Column(columnDefinition = "INT COMMENT 'Order'", nullable = false)
     private Integer num;
     @Column(columnDefinition = "INT COMMENT '级别'", nullable = false)
     private Integer levels;
@@ -46,7 +46,7 @@ public class Menu  extends BaseEntity {
     private Integer ismenu;
     @Column(columnDefinition = "VARCHAR(32) COMMENT '鼠标悬停提示信息'")
     private String tips;
-    @Column(columnDefinition = "INT COMMENT '是否默认打开1:是,0:否'")
+    @Column(columnDefinition = "INT COMMENT '是否默认打开1:Yes,0:No'")
     private Integer isopen;
     @Column(columnDefinition = "VARCHAR(64) COMMENT '页面组件'")
     private String component;

@@ -22,6 +22,6 @@ public class Message extends BaseEntity {
     private String receiver;
     @Column(name="type",columnDefinition = "VARCHAR(32) COMMENT '消息类型,0:短信,1:邮件'")
     private Integer type;
-    @Column(name="state",columnDefinition = "VARCHAR(32) COMMENT '消息类型,0:初始,1:成功,2:失败'")
+    @Column(name="state",columnDefinition = "VARCHAR(32) COMMENT '消息类型,0:初始,1:Success,2:Fail'")
     private Integer state;
 }

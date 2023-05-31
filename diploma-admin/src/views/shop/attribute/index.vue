@@ -3,7 +3,7 @@
     <div class="block">
       <el-row  :gutter="20">
         <el-col :span="6">
-          <el-input v-model="listQuery.name" size="mini" placeholder="请输入规格名名称"></el-input>
+          <el-input v-model="listQuery.name" size="mini" placeholder="Please enter the name of the specification"></el-input>
         </el-col>
         <el-col :span="6">
           <el-button type="success" size="mini" icon="el-icon-search" @click.native="search">{{ $t('button.search') }}</el-button>
@@ -28,7 +28,7 @@
           {{scope.row.id}}
         </template>
       </el-table-column>
-      <el-table-column label="名称">
+      <el-table-column label="Name">
         <template slot-scope="scope">
           {{scope.row.attrName}}
         </template>
@@ -48,24 +48,24 @@
       width="60%">
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
 
-        <el-form-item label="名称" prop="name">
+        <el-form-item label="Name" prop="name">
           <el-input v-model="form.name"  minlength=1></el-input>
         </el-form-item>
         <el-form-item
           v-for="(rec, index) in form.details"
-          :label="'规格名' + (index+1)"
+          :label="'Specification name' + (index+1)"
           :key="rec.key"
           :prop="'details.' + index + '.value'"
           :rules="{
-            required: true, message: '不能为空', trigger: 'blur'
+            required: true, message: 'Cannot be empty', trigger: 'blur'
           }"
         >
           <el-col :span="10">
-          <el-input v-model="rec.key" placeholder="值"></el-input>
+          <el-input v-model="rec.key" placeholder="Value"></el-input>
           </el-col>
           <el-col class="line" :span="1">&nbsp; </el-col>
           <el-col :span="10">
-          <el-input v-model="rec.value" placeholder="名称"></el-input>
+          <el-input v-model="rec.value" placeholder="Name"></el-input>
           </el-col>
           <el-col :span="3">&nbsp;
           <el-button @click.prevent="removeDetail(rec)" type="danger" icon="el-icon-delete" >{{ $t('button.delete')
@@ -75,7 +75,7 @@
 
         <el-form-item>
           <el-button type="primary" @click="save">{{ $t('button.submit') }}</el-button>
-          <el-button @click="addDetail">新增规格名</el-button>
+          <el-button @click="addDetail">New specification name</el-button>
           <el-button @click.native="formVisible = false">{{ $t('button.cancel') }}</el-button>
         </el-form-item>
       </el-form>

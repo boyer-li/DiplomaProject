@@ -6,7 +6,7 @@
           <el-input v-model="listQuery.userName" size="mini" placeholder="Name"></el-input>
         </el-col>
         <el-col :span="6">
-          <el-input v-model="listQuery.mobile" size="mini"  placeholder="手机号"></el-input>
+          <el-input v-model="listQuery.mobile" size="mini"  placeholder="Phone number"></el-input>
         </el-col>
         <el-col :span="8">
           <el-date-picker
@@ -14,7 +14,7 @@
             size="mini"
             type="datetimerange"
             :picker-options="pickerOptions"
-            range-separator="至"
+            range-separator="to"
             start-placeholder="邀约开始日期"
             end-placeholder="邀约截至日期"
             value-format="yyyyMMddHHmmss"
@@ -59,7 +59,7 @@
           {{scope.row.createTime}}
         </template>
       </el-table-column>
-      <el-table-column label="备注">
+      <el-table-column label="Remarks">
         <template slot-scope="scope">
           {{scope.row.remark}}
         </template>

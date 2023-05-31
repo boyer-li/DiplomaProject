@@ -106,7 +106,7 @@ public class OrderController {
         return Rets.success(fileInfo);
     }
     @RequestMapping(value = "/sendOut/{id}", method = RequestMethod.POST)
-    @BussinessLog(value = "发货", key = "id")
+    @BussinessLog(value = "Shipping", key = "id")
     public Object sendOut(@PathVariable("id") Long id,
                           @RequestParam("idExpress") Long idExpress,
                           @RequestParam("shippingSn") String shippingSn,

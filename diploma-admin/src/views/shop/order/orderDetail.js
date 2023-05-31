@@ -34,7 +34,7 @@ export default {
     },
     openSendOutForm(){
       if(this.expressList.length==0){
-        expressApi.queryAll().then( response=> {
+        expressApi.queryAll().then( response => {
           this.expressList = response.data
         })
       }
@@ -50,7 +50,7 @@ export default {
           this.fetchData()
           this.shipping.show = false
           this.$message({
-            message: '发货成功',
+            message: 'Shipping Success',
             type: 'success'
           })
         })

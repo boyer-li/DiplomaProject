@@ -8,7 +8,7 @@ package cn.enilu.flash.bean.vo.node;
  */
 public enum IsMenu {
 
-    YES(1, "是"),
+    YES(1, "Yes"),
     NO(0, "不是");//不是菜单的是按钮
 
     int code;

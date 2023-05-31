@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加用户',
+      formTitle: 'Add User',
       isAdd: true,
       form: {
         mobile: '',

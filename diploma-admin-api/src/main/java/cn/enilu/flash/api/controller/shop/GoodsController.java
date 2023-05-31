@@ -109,7 +109,7 @@ public class GoodsController {
 	}
 	@RequestMapping(value="/changeIsOnSale",method = RequestMethod.POST)
 	@RequiresPermissions(value = {Permission.GOODS_EDIT})
-	@BussinessLog(value = "上架/下架商品", key = "id")
+	@BussinessLog(value = "Uploaded/下架商品", key = "id")
 	public Object changeIsOnSale(@RequestParam("id")  Long id,@RequestParam("isOnSale") Boolean isOnSale){
 		if (id == null) {
 			throw new ApplicationException(ApplicationExceptionEnum.REQUEST_NULL);

@@ -22,29 +22,29 @@
 
     <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
               @current-change="handleCurrentChange">
-      <el-table-column label="名称">
+      <el-table-column label="Name">
         <template slot-scope="scope">
           {{scope.row.name}}
         </template>
       </el-table-column>
-      <el-table-column label="小图">
+      <el-table-column label="Small picture">
         <template slot-scope="scope">
           <img :src="apiUrl+ '/file/getImgStream?idFile=' +scope.row.pic" style="width:50px;">
 
         </template>
       </el-table-column>
 
-      <el-table-column label="类别">
+      <el-table-column label="Category">
         <template slot-scope="scope">
           {{scope.row.category.name}}
         </template>
       </el-table-column>
-      <el-table-column label="产品简介">
+      <el-table-column label="Product Description">
         <template slot-scope="scope">
           {{scope.row.descript}}
         </template>
       </el-table-column>
-      <el-table-column label="上架">
+      <el-table-column label="Uploaded">
         <template slot-scope="scope">
           <el-switch
             v-model="scope.row.isOnSale"
@@ -53,20 +53,20 @@
           </el-switch>
         </template>
       </el-table-column>
-      <el-table-column label="是否新品推荐">
+      <el-table-column label="New or old">
         <template slot-scope="scope">
-          <el-tag type="success" v-show="scope.row.isNew">是</el-tag>
-          <el-tag type="warning"  v-show="!scope.row.isNew">否</el-tag>
+          <el-tag type="success" v-show="scope.row.isNew">Yes</el-tag>
+          <el-tag type="warning"  v-show="!scope.row.isNew">No</el-tag>
 
         </template>
       </el-table-column>
-      <el-table-column label="是否人气商品">
+      <el-table-column label="Hot or not">
         <template slot-scope="scope">
-          <el-tag type="success" v-show="scope.row.isHot">是</el-tag>
-          <el-tag type="warning"  v-show="!scope.row.isHot">否</el-tag>
+          <el-tag type="success" v-show="scope.row.isHot">Yes</el-tag>
+          <el-tag type="warning"  v-show="!scope.row.isHot">No</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="操作">
+      <el-table-column label="Operation">
         <template slot-scope="scope">
           <el-button type="primary" size="mini" icon="el-icon-edit" @click.native="edit(scope.row.id)" circle>
           </el-button>

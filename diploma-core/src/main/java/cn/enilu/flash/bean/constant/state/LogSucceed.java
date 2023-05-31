@@ -8,8 +8,8 @@ package cn.enilu.flash.bean.constant.state;
  */
 public enum LogSucceed {
 
-    SUCCESS("成功"),
-    FAIL("失败");
+    SUCCESS("Success"),
+    FAIL("Fail");
 
     String message;
 

@@ -17,7 +17,7 @@ export default {
       },
       rootList: [],
       formVisible: false,
-      formTitle: '添加商品类别',
+      formTitle: 'Add product category',
       isAdd: true,
       form: {
         name: '',
@@ -86,7 +86,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加商品类别'
+      this.formTitle = 'Add product category'
       this.formVisible = true
       this.isAdd = true
     },
@@ -127,14 +127,14 @@ export default {
     edit(data) {
       this.isAdd = false
       this.form = data
-      this.formTitle = '编辑商品类别'
+      this.formTitle = 'Edit Product Category'
       this.formVisible = true
 
     },
     changeShowIndex(data) {
       if (data.pid) {
         this.$message({
-          message: '二级菜单不支持该操作',
+          message: 'The secondary menu does not support this operation',
           type: 'warning'
         })
         data.showIndex = false
@@ -171,7 +171,7 @@ export default {
     bannerMgr(data) {
       if (data.pid) {
         this.$message({
-          message: '二级菜单不支持该操作',
+          message: 'The secondary menu does not support this operation',
           type: 'warning'
         })
         data.showIndex = false
@@ -208,20 +208,20 @@ export default {
       })
     },
     attrKeyAdd() {
-      this.$prompt('请输入属性名', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$prompt('Please enter the property name', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
       }).then(({value}) => {
         if (!value || value === '') {
           this.$message({
             type: 'warning',
-            message: '属性名不能为空'
+            message: 'The property name cannot be empty'
           })
         }
         attrKeyApi.save({attrName: value, idCategory: this.attrKey.idCategory}).then(response => {
           this.$message({
             type: 'success',
-            message: '新增属性成功'
+            message: 'New Attribute Success'
           })
           categoryApi.getAttrKeys(this.attrKey.idCategory).then(response2 => {
             this.attrKey.list = response2.data
@@ -233,22 +233,22 @@ export default {
     },
     attrKeyEdit(item) {
       console.log('item', item)
-      this.$prompt('请输入属性名', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$prompt('Please enter the property name', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         inputValue: item.attrName,
       }).then(({value}) => {
         if (!value || value === '') {
           this.$message({
             type: 'warning',
-            message: '属性名不能为空'
+            message: 'The property name cannot be empty'
           })
         }
         attrKeyApi.updateAttrName(item.id, value).then(response => {
           item.attrName = value
           this.$message({
             type: 'success',
-            message: '编辑成功'
+            message: 'Editing Success'
           })
         })
         return
@@ -261,7 +261,7 @@ export default {
       attrKeyApi.remove(id).then(response => {
         this.$message({
           type: 'success',
-          message: '删除成功'
+          message: 'Deleted successfully'
         })
         categoryApi.getAttrKeys(this.attrKey.idCategory).then(response2 => {
           this.attrKey.list = response2.data
@@ -278,20 +278,20 @@ export default {
       })
     },
     attrValAdd() {
-      this.$prompt('请输入属性名', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$prompt('Please enter the property name', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
       }).then(({value}) => {
         if (!value || value === '') {
           this.$message({
             type: 'warning',
-            message: '属性名不能为空'
+            message: 'The property name cannot be empty'
           })
         }
         attrValApi.save({attrVal: value, idAttrKey: this.attrVal.idAttrKey}).then(response => {
           this.$message({
             type: 'success',
-            message: '新增属性成功'
+            message: 'New Attribute Success'
           })
           attrValApi.getAttrVals(this.attrVal.idAttrKey).then(response2 => {
             this.attrVal.list = response2.data
@@ -303,22 +303,22 @@ export default {
     },
     attrValEdit(item) {
       console.log('item', item)
-      this.$prompt('请输入属性名', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$prompt('Please enter the property name', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         inputValue: item.attrVal,
       }).then(({value}) => {
         if (!value || value === '') {
           this.$message({
             type: 'warning',
-            message: '属性名不能为空'
+            message: 'The property name cannot be empty'
           })
         }
         attrValApi.updateAttrVal(item.id, value).then(response => {
           item.attrName = value
           this.$message({
             type: 'success',
-            message: '编辑成功'
+            message: 'Editing Success'
           })
           attrValApi.getAttrVals(this.attrVal.idAttrKey).then(response2 => {
             this.attrVal.list = response2.data
@@ -334,7 +334,7 @@ export default {
       attrValApi.remove(id).then(response => {
         this.$message({
           type: 'success',
-          message: '删除成功'
+          message: 'Deleted successfully'
         })
         attrValApi.getAttrVals(this.attrVal.idAttrKey).then(response2 => {
           this.attrVal.list = response2.data

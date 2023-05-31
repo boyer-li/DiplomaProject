@@ -9,8 +9,8 @@ package cn.enilu.flash.bean.constant.state;
 public enum BizLogType {
 
     ALL(0, null),//全部日志
-    BUSSINESS(1, "业务日志"),
-    EXCEPTION(2, "异常日志");
+    BUSSINESS(1, "Business Log"),
+    EXCEPTION(2, "Exception Log");
 
     Integer val;
     String message;

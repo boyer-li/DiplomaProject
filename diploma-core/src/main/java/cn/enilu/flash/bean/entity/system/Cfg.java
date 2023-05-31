@@ -26,7 +26,7 @@ public class Cfg  extends BaseEntity {
     @NotBlank(message = "参数值不能为空")
     @Column(name = "cfg_value",columnDefinition = "VARCHAR(512) COMMENT '参数值'")
     private String cfgValue;
-    @Column(name = "cfg_desc",columnDefinition = "TEXT COMMENT '备注'")
+    @Column(name = "cfg_desc",columnDefinition = "TEXT COMMENT 'Remarks'")
     private String cfgDesc;
 
 }

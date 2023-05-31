@@ -4,81 +4,81 @@
       <el-row>
         <el-col :span="24">
           <el-button type="success" size="mini" icon="el-icon-edit" @click.native="openSendOutForm"
-                     v-show="form.statusName =='待发货'">发货
+                     v-show="form.statusName =='To be shipped'">Shipping
           </el-button>
-          <el-button type="default" size="mini" @click="printOrder">打 印</el-button>
+          <el-button type="default" size="mini" @click="printOrder">Print</el-button>
         </el-col>
       </el-row>
     </div>
 
     <el-form ref="print"   label-width="150px" >
       <el-row>
-        <h3>基本信息</h3>
+        <h3>Basic Information</h3>
         <el-col :span="12">
-          <el-form-item label="订单号">
+          <el-form-item label="Order Number">
             <span> {{ form.orderSn}}</span>
           </el-form-item>
         </el-col>
         <el-col :span="12">
-          <el-form-item label="订单用户">
+          <el-form-item label="Order Users">
             <router-link :to="{path:'shopUserDetail?id='+form.user.id}">
               {{ form.user.mobile}}({{form.user.nickName}})
             </router-link>
           </el-form-item>
         </el-col>
         <el-col :span="12">
-          <el-form-item label="状态">
+          <el-form-item label="Status">
             <span> <strong>{{ form.statusName }} </strong></span>
           </el-form-item>
         </el-col>
         <el-col :span="12">
-          <el-form-item label="订单备注">
+          <el-form-item label="Order Remarks">
             <span>{{ form.message }} </span>
           </el-form-item>
         </el-col>
-        <h3>收货信息</h3>
+        <h3>Receiving Information</h3>
         <el-col :span="12">
-          <el-form-item label="收货人">
+          <el-form-item label="Consignee">
             <span>{{ form.consignee}}</span>
           </el-form-item>
         </el-col>
         <el-col :span="12">
-          <el-form-item label="联系电话">
+          <el-form-item label="Contact number">
             <span>{{ form.mobile}}</span>
           </el-form-item>
         </el-col>
         <el-col :span="12">
-          <el-form-item label="收货地址">
+          <el-form-item label="Receiving Address">
             <span>{{ form.consigneeAddress}}</span>
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <h3>订单明细</h3>
+          <h3>Order details</h3>
         </el-col>
         <el-table :data="form.items" border fit  >
-          <el-table-column label="商品">
+          <el-table-column label="Used goods">
             <template slot-scope="scope">
               <router-link :to="{path:'goodsEdit?id='+scope.row.goods.id}">
                 {{scope.row.title}}
               </router-link>
             </template>
           </el-table-column>
-          <el-table-column label="图片">
+          <el-table-column label="Pictures">
             <template slot-scope="scope">
             <img :src="apiUrl+ '/file/getImgStream?idFile=' + scope.row.goods.pic" style="width:50px;">
             </template>
           </el-table-column>
-          <el-table-column label="价格">
+          <el-table-column label="Price">
             <template slot-scope="scope">
               {{formatPrice(scope.row.price)}}
             </template>
           </el-table-column>
-          <el-table-column label="数量">
+          <el-table-column label="Quantity">
             <template slot-scope="scope">
               {{scope.row.count}}
             </template>
           </el-table-column>
-          <el-table-column label="合计">
+          <el-table-column label="Total">
             <template slot-scope="scope">
               {{ formatPrice(scope.row.totalPrice)}}
             </template>
@@ -89,17 +89,17 @@
 
         </el-table>
         <el-col :span="8">
-          <el-form-item label="总金额">
+          <el-form-item label="Total amount">
             <span>{{formatPrice(form.totalPrice)}}</span>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="优惠券抵扣金额">
+          <el-form-item label="Coupon Credit Amount">
             <span> {{formatPrice(form.couponPrice)}}</span>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="实付金额">
+          <el-form-item label="Actual amount paid">
             <span>{{formatPrice(form.realPrice)}}</span>
           </el-form-item>
         </el-col>
@@ -107,13 +107,13 @@
 
     </el-form>
     <el-dialog
-      title="发货"
+      title="Shipping"
       :visible.sync="shipping.show"
       width="40%">
       <el-form ref="form" :model="shipping"  label-width="200px">
         <el-row>
           <el-col :span="24">
-            <el-form-item label="快递公司"  >
+            <el-form-item label="Courier Company"  >
               <el-select v-model="shipping.idExpress" placeholder="choose">
                 <el-option
                   v-for="item in expressList"
@@ -125,7 +125,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="快递单号"  >
+            <el-form-item label="Courier Bill Number"  >
               <el-input v-model="shipping.shippingSn" minlength=1></el-input>
             </el-form-item>
           </el-col>

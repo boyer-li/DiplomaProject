@@ -33,11 +33,11 @@ export default {
       rules: {
         name: [
           { required: true, message: '请输入菜单名称', trigger: 'blur' },
-          { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
+          { min: 2, max: 20, message: 'Length from 2 to 20 characters', trigger: 'blur' }
         ],
         code: [
           { required: true, message: '请输入编码', trigger: 'blur' },
-          { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
+          { min: 2, max: 20, message: 'Length from 2 to 20 characters', trigger: 'blur' }
         ],
         url: [
           { required: true, message: '请输入资源地址', trigger: 'blur' }
@@ -78,7 +78,7 @@ export default {
         return true
       }
       this.$message({
-        message: '请选中操作项',
+        message: 'Please check the operation item',
         type: 'warning'
       })
       return false
@@ -101,7 +101,7 @@ export default {
           delete menuData.children
           save(menuData).then(response => {
             this.$message({
-              message: '提交成功',
+              message: 'Submitted successfully',
               type: 'success'
             })
             self.fetchData()
@@ -114,7 +114,7 @@ export default {
     },
     edit(row) {
       this.form= Object.assign({},row);
-      if (row.isMenuName === '是') {
+      if (row.isMenuName === 'Yes') {
         this.form.ismenu = 1
       } else {
         this.form.ismenu = 0
@@ -128,20 +128,20 @@ export default {
       this.isAdd = false
     },
     remove(row) {
-      this.$confirm('确定删除该记录?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('Sure to delete?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         delMenu(row.id).then(response => {
           this.$message({
-            message: '删除成功',
+            message: 'Deleted successfully',
             type: 'success'
           })
           this.fetchData()
         }).catch(err =>{
           this.$notify.error({
-            title: '错误',
+            title: 'Error',
             message:err,
           })
         })
@@ -149,7 +149,7 @@ export default {
     },
     componentTips(){
       this.$notify({
-        title: '提示',
+        title: 'Tips',
         dangerouslyUseHTMLString:true,
         message: '顶级目录请输入layout,<br/>左侧菜单请根据实际组件路径输入:views/...<br/>功能按钮无需输入该值'
       })

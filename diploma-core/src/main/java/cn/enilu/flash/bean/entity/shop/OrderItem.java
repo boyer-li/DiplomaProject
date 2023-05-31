@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  * @date ：Created in 2019/10/29 17:40
  */
 @Data
-@Table(appliesTo = "t_shop_order_item", comment = "订单明细")
+@Table(appliesTo = "t_shop_order_item", comment = "Order details")
 @Entity(name = "t_shop_order_item")
 public class OrderItem extends ShopBaseEntity {
     @Column(name = "id_order", columnDefinition = "BIGINT COMMENT '所属订单id'")

@@ -21,8 +21,8 @@ layout("/layouts/platform.html"){
                             <div class="col-sm-8">
 #if ($column.isBoolean())
 							<form:select path="${column.FieldName}" class="${column.ValidationFormClass}" placeholder="${column.Label}">
-								<form:option value="true">是</form:option>
-								<form:option value="false">否</form:option>
+								<form:option value="true">Yes</form:option>
+								<form:option value="false">No</form:option>
 							</form:select>
 #else
                             <input type="text" id="${column.FieldName}" class="form-control" name="${column.FieldName}" data-parsley-required="true" placeholder="${column.label}">

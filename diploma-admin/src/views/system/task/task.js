@@ -107,7 +107,7 @@ export default {
           }).then(response => {
             console.log(response)
             this.$message({
-              message: '提交成功',
+              message: 'Submitted successfully',
               type: 'success'
             })
             this.fetchData()
@@ -123,20 +123,20 @@ export default {
         return true
       }
       this.$message({
-        message: '请选中操作项',
+        message: 'Please check the operation item',
         type: 'warning'
       })
       return false
     },
     enable(id) {
-      this.$confirm('确定启用该定时任务?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('确定启用该定时任务?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         enable(id).then(response => {
           this.$message({
-            message: '操作成功',
+            message: 'Successful operation',
             type: 'success'
           })
           this.fetchData()
@@ -145,14 +145,14 @@ export default {
       })
     },
     disable(id) {
-      this.$confirm('确定禁用该定时任务?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('确定禁用该定时任务?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         disable(id).then(response => {
           this.$message({
-            message: '操作成功',
+            message: 'Successful operation',
             type: 'success'
           })
           this.fetchData()
@@ -182,14 +182,14 @@ export default {
     remove() {
       if (this.checkSel()) {
         var id = this.selRow.id
-        this.$confirm('确定删除该记录?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
+        this.$confirm('Sure to delete?', 'Tips', {
+          confirmButtonText: 'Confirm',
+          cancelButtonText: 'Cancel',
           type: 'warning'
         }).then(() => {
           remove(id).then(response => {
             this.$message({
-              message: '操作成功',
+              message: 'Successful operation',
               type: 'success'
             })
             this.fetchData()
@@ -199,14 +199,14 @@ export default {
       }
     },
     runOnce(id) {
-      this.$confirm('确定立即执行该定时任务?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('确定立即执行该定时任务?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         runOnce(id).then(response => {
           this.$message({
-            message: '操作成功',
+            message: 'Successful operation',
             type: 'success'
           })
           this.fetchData()

@@ -183,7 +183,7 @@ public class MenuNode implements Comparable {
 
     public String getIsMenuName() {
 
-        return ismenu == 1 ? "是" : "否";
+        return ismenu == 1 ? "Yes" : "No";
     }
 
     public void setIsMenuName(String isMenuName) {

@@ -45,7 +45,7 @@ public class DictCacheImpl extends BaseCache implements DictCache {
             }
             // id ：[{male},{female}]
             set(String.valueOf(dict.getId()), children);
-            // 性别：[{male},{female}]
+            // Gender：[{male},{female}]
             set(dict.getName(), children);
 
             for (Dict child : children) {

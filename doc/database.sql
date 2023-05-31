@@ -86,7 +86,7 @@ CREATE TABLE `t_cms_channel` (
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `code` varchar(64) DEFAULT NULL COMMENT '编码',
-  `name` varchar(64) DEFAULT NULL COMMENT '名称',
+  `name` varchar(64) DEFAULT NULL COMMENT 'Name',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COMMENT='文章栏目';
 
@@ -109,8 +109,8 @@ CREATE TABLE `t_cms_contacts` (
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `email` varchar(32) DEFAULT NULL COMMENT '电子邮箱',
-  `mobile` varchar(64) DEFAULT NULL COMMENT '联系电话',
-  `remark` varchar(128) DEFAULT NULL COMMENT '备注',
+  `mobile` varchar(64) DEFAULT NULL COMMENT 'Contact number',
+  `remark` varchar(128) DEFAULT NULL COMMENT 'Remarks',
   `user_name` varchar(64) DEFAULT NULL COMMENT '邀约人名称',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COMMENT='邀约信息';
@@ -132,7 +132,7 @@ CREATE TABLE `t_message` (
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `content` text COMMENT '消息内容',
   `receiver` varchar(64) DEFAULT NULL COMMENT '接收者',
-  `state` varchar(32) DEFAULT NULL COMMENT '消息类型,0:初始,1:成功,2:失败',
+  `state` varchar(32) DEFAULT NULL COMMENT '消息类型,0:初始,1:Success,2:Fail',
   `tpl_code` varchar(32) DEFAULT NULL COMMENT '模板编码',
   `type` varchar(32) DEFAULT NULL COMMENT '消息类型,0:短信,1:邮件',
   PRIMARY KEY (`id`)
@@ -154,7 +154,7 @@ CREATE TABLE `t_message_sender` (
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `class_name` varchar(64) DEFAULT NULL COMMENT '发送类',
-  `name` varchar(64) DEFAULT NULL COMMENT '名称',
+  `name` varchar(64) DEFAULT NULL COMMENT 'Name',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COMMENT='消息发送者';
 
@@ -229,15 +229,15 @@ CREATE TABLE `t_shop_address` (
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `address_detail` varchar(64) DEFAULT NULL COMMENT '详细地址',
   `area_code` varchar(16) DEFAULT NULL COMMENT '地区编码',
-  `city` varchar(16) DEFAULT NULL COMMENT '市',
-  `district` varchar(16) DEFAULT NULL COMMENT '区县',
-  `id_user` bigint DEFAULT NULL COMMENT '用户id',
-  `is_default` tinyint DEFAULT NULL COMMENT '是否默认',
-  `is_delete` tinyint DEFAULT NULL COMMENT '是否删除',
-  `name` varchar(32) DEFAULT NULL COMMENT '收件人',
-  `post_code` varchar(6) DEFAULT NULL COMMENT '邮政编码',
-  `province` varchar(16) DEFAULT NULL COMMENT '省',
-  `tel` varchar(16) DEFAULT NULL COMMENT '联系电话',
+  `city` varchar(16) DEFAULT NULL COMMENT 'City',
+  `district` varchar(16) DEFAULT NULL COMMENT 'District and County',
+  `id_user` bigint DEFAULT NULL COMMENT 'User id',
+  `is_default` tinyint DEFAULT NULL COMMENT 'Default or not',
+  `is_delete` tinyint DEFAULT NULL COMMENT 'Whether to delete',
+  `name` varchar(32) DEFAULT NULL COMMENT 'Recipient',
+  `post_code` varchar(6) DEFAULT NULL COMMENT 'Postal Code',
+  `province` varchar(16) DEFAULT NULL COMMENT 'Province',
+  `tel` varchar(16) DEFAULT NULL COMMENT 'Contact number',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COMMENT='收货地址';
 
@@ -263,7 +263,7 @@ CREATE TABLE `t_shop_attr_key` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-  `attr_name` varchar(32) DEFAULT NULL COMMENT '属性名',
+  `attr_name` varchar(32) DEFAULT NULL COMMENT 'Property Name',
   `id_category` bigint DEFAULT NULL COMMENT '商品类别id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COMMENT='商品属性名';
@@ -284,7 +284,7 @@ CREATE TABLE `t_shop_attr_val` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-  `attr_val` varchar(32) DEFAULT NULL COMMENT '属性值',
+  `attr_val` varchar(32) DEFAULT NULL COMMENT 'Attribute Value',
   `id_attr_key` bigint DEFAULT NULL COMMENT '属性id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COMMENT='商品属性值';
@@ -308,7 +308,7 @@ CREATE TABLE `t_shop_cart` (
   `count` int DEFAULT NULL COMMENT '数量',
   `id_goods` bigint DEFAULT NULL COMMENT '商品id',
   `id_sku` bigint DEFAULT NULL COMMENT 'skuId',
-  `id_user` bigint DEFAULT NULL COMMENT '用户id',
+  `id_user` bigint DEFAULT NULL COMMENT 'User id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb3 COMMENT='购物车';
 
@@ -335,13 +335,13 @@ CREATE TABLE `t_shop_category` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-  `descript` varchar(64) DEFAULT NULL COMMENT '备注',
-  `icon` varchar(64) DEFAULT NULL COMMENT '图标',
-  `is_delete` tinyint DEFAULT NULL COMMENT '是否删除',
-  `name` varchar(16) DEFAULT NULL COMMENT '名称',
+  `descript` varchar(64) DEFAULT NULL COMMENT 'Remarks',
+  `icon` varchar(64) DEFAULT NULL COMMENT 'Icon',
+  `is_delete` tinyint DEFAULT NULL COMMENT 'Whether to delete',
+  `name` varchar(16) DEFAULT NULL COMMENT 'Name',
   `pid` bigint DEFAULT NULL COMMENT '父类别',
-  `show_index` tinyint DEFAULT NULL COMMENT '是否显示在首页',
-  `sort` int DEFAULT NULL COMMENT '顺序',
+  `show_index` tinyint DEFAULT NULL COMMENT 'Whether to show in the home page',
+  `sort` int DEFAULT NULL COMMENT 'Order',
   `url` varchar(32) DEFAULT NULL COMMENT '链接地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3 COMMENT='商品类别';
@@ -418,11 +418,11 @@ CREATE TABLE `t_shop_express_info` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-  `express_company` varchar(32) DEFAULT NULL COMMENT '快递公司',
+  `express_company` varchar(32) DEFAULT NULL COMMENT 'Courier Company',
   `id_order` bigint DEFAULT NULL COMMENT '所属订单id',
   `info` text COMMENT '详细信息',
-  `shipping_sn` varchar(32) DEFAULT NULL COMMENT '快递单号',
-  `state` int DEFAULT NULL COMMENT '状态:0在途中,1:已签收,-1问题件',
+  `shipping_sn` varchar(32) DEFAULT NULL COMMENT 'Courier Bill Number',
+  `state` int DEFAULT NULL COMMENT 'Status:0在途中,1:已签收,-1问题件',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COMMENT='快递信息';
 
@@ -441,7 +441,7 @@ CREATE TABLE `t_shop_favorite` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `id_goods` bigint DEFAULT NULL COMMENT '商品id',
-  `id_user` bigint DEFAULT NULL COMMENT '用户id',
+  `id_user` bigint DEFAULT NULL COMMENT 'User id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COMMENT='用户收藏';
 
@@ -473,21 +473,21 @@ CREATE TABLE `t_shop_goods` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-  `descript` varchar(255) DEFAULT NULL COMMENT '产品简介',
+  `descript` varchar(255) DEFAULT NULL COMMENT 'Product Description',
   `detail` text COMMENT '产品详情',
   `gallery` varchar(512) DEFAULT NULL COMMENT '大图相册列表,以逗号分隔',
   `id_category` bigint DEFAULT NULL COMMENT '类别id',
-  `is_delete` tinyint DEFAULT NULL COMMENT '是否删除',
-  `is_hot` tinyint DEFAULT NULL COMMENT '是否人气商品',
-  `is_new` tinyint DEFAULT NULL COMMENT '是否新品推荐',
+  `is_delete` tinyint DEFAULT NULL COMMENT 'Whether to delete',
+  `is_hot` tinyint DEFAULT NULL COMMENT 'Hot or not',
+  `is_new` tinyint DEFAULT NULL COMMENT 'New or old',
   `is_on_sale` tinyint DEFAULT NULL COMMENT '是否上架',
   `like_num` int DEFAULT NULL COMMENT '收藏数',
-  `name` varchar(32) DEFAULT NULL COMMENT '名称',
-  `pic` varchar(64) DEFAULT NULL COMMENT '小图',
-  `price` varchar(16) DEFAULT NULL COMMENT '价格',
+  `name` varchar(32) DEFAULT NULL COMMENT 'Name',
+  `pic` varchar(64) DEFAULT NULL COMMENT 'Small picture',
+  `price` varchar(16) DEFAULT NULL COMMENT 'Price',
   `stock` int DEFAULT NULL COMMENT '库存数量',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COMMENT='商品';
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COMMENT='Used goods';
 
 /*Data for the table `t_shop_goods` */
 
@@ -532,10 +532,10 @@ CREATE TABLE `t_shop_goods_sku` (
   `code` varchar(32) DEFAULT NULL COMMENT 'sku编码,格式:逗号分割的属性值id',
   `code_name` varchar(32) DEFAULT NULL COMMENT 'sku名称,格式:逗号分割的属性值',
   `id_goods` bigint DEFAULT NULL COMMENT '商品id',
-  `is_deleted` tinyint DEFAULT NULL COMMENT '是否删除1:是,0:否',
-  `marketing_price` varchar(32) DEFAULT NULL COMMENT '市场价,原价',
-  `price` varchar(32) DEFAULT NULL COMMENT '价格',
-  `stock` int DEFAULT NULL COMMENT '库存',
+  `is_deleted` tinyint DEFAULT NULL COMMENT '是否删除1:Yes,0:No',
+  `marketing_price` varchar(32) DEFAULT NULL COMMENT 'Market Price,原价',
+  `price` varchar(32) DEFAULT NULL COMMENT 'Price',
+  `stock` int DEFAULT NULL COMMENT 'Inventory',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COMMENT='商品SKU';
 
@@ -559,25 +559,25 @@ CREATE TABLE `t_shop_order` (
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
   `admin_message` varchar(256) DEFAULT NULL COMMENT '管理员备注',
   `confirm_receiving_time` datetime DEFAULT NULL COMMENT '确认收货时间',
-  `consignee` varchar(32) DEFAULT NULL COMMENT '收件人',
+  `consignee` varchar(32) DEFAULT NULL COMMENT 'Recipient',
   `consignee_address` varchar(64) DEFAULT NULL COMMENT '收件地址',
-  `coupon_price` varchar(32) DEFAULT NULL COMMENT '优惠券抵扣金额',
-  `id_address` bigint DEFAULT NULL COMMENT '收货信息',
-  `id_express` bigint DEFAULT NULL COMMENT '快递公司',
-  `id_user` bigint DEFAULT NULL COMMENT '用户id',
-  `message` varchar(64) DEFAULT NULL COMMENT '订单备注',
+  `coupon_price` varchar(32) DEFAULT NULL COMMENT 'Coupon Credit Amount',
+  `id_address` bigint DEFAULT NULL COMMENT 'Receiving Information',
+  `id_express` bigint DEFAULT NULL COMMENT 'Courier Company',
+  `id_user` bigint DEFAULT NULL COMMENT 'User id',
+  `message` varchar(64) DEFAULT NULL COMMENT 'Order Remarks',
   `mobile` varchar(16) DEFAULT NULL COMMENT '收件人电话',
-  `order_sn` varchar(32) DEFAULT NULL COMMENT '订单号',
+  `order_sn` varchar(32) DEFAULT NULL COMMENT 'Order Number',
   `pay_id` varchar(32) DEFAULT NULL COMMENT '支付流水号',
   `pay_status` int DEFAULT NULL COMMENT '支付状态1:未付款;2:已付款,3:支付中',
   `pay_time` varchar(32) DEFAULT NULL COMMENT '支付成功时间',
   `pay_type` varchar(16) DEFAULT NULL COMMENT '实付类型:alipay,wechat',
-  `real_price` varchar(32) DEFAULT NULL COMMENT '实付金额',
+  `real_price` varchar(32) DEFAULT NULL COMMENT 'Actual amount paid',
   `shipping_amount` varchar(32) DEFAULT NULL COMMENT '配送费用',
-  `shipping_sn` varchar(32) DEFAULT NULL COMMENT '快递单号',
+  `shipping_sn` varchar(32) DEFAULT NULL COMMENT 'Courier Bill Number',
   `shipping_time` datetime DEFAULT NULL COMMENT '出库时间',
-  `status` int DEFAULT NULL COMMENT '状态',
-  `total_price` varchar(32) DEFAULT NULL COMMENT '总金额',
+  `status` int DEFAULT NULL COMMENT 'Status',
+  `total_price` varchar(32) DEFAULT NULL COMMENT 'Total amount',
   `trade_amount` varchar(32) DEFAULT NULL COMMENT '交易金额',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3 COMMENT='订单';
@@ -619,7 +619,7 @@ CREATE TABLE `t_shop_order_item` (
   `price` varchar(16) DEFAULT NULL COMMENT '单价',
   `total_price` varchar(16) DEFAULT NULL COMMENT '合计',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COMMENT='订单明细';
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COMMENT='Order details';
 
 /*Data for the table `t_shop_order_item` */
 
@@ -699,7 +699,7 @@ insert  into `t_shop_order_log`(`id`,`create_time`,`modify_time`,`descript`,`id_
 (28,'2020-02-12 21:17:58','2020-02-12 21:17:58','用户已付款',8),
 (29,'2020-02-12 21:20:04','2020-02-12 21:20:04','用户已付款',11),
 (30,'2020-02-12 21:45:33','2020-02-12 21:45:33','用户已付款',10),
-(31,'2020-02-12 22:04:43','2020-02-12 22:04:43','管理员(admin)已发货',10),
+(31,'2020-02-12 22:04:43','2020-02-12 22:04:43','管理员(admin)Shipped',10),
 (32,'2023-04-22 16:05:00','2023-04-22 16:05:00','系统超时取消订单',1),
 (33,'2023-04-22 16:05:00','2023-04-22 16:05:00','系统超时取消订单',7),
 (34,'2023-04-22 16:05:00','2023-04-22 16:05:00','系统超时取消订单',9),
@@ -722,7 +722,7 @@ CREATE TABLE `t_shop_user` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `avatar` varchar(64) DEFAULT NULL COMMENT '头像',
   `create_time` datetime DEFAULT NULL COMMENT '注册时间',
-  `gender` varchar(18) DEFAULT NULL COMMENT '性别:male;female',
+  `gender` varchar(18) DEFAULT NULL COMMENT 'Gender:male;female',
   `last_login_time` datetime DEFAULT NULL COMMENT '最后登陆时间',
   `mobile` varchar(16) DEFAULT NULL COMMENT '手机号',
   `nick_name` varchar(32) DEFAULT NULL COMMENT '昵称',
@@ -732,7 +732,7 @@ CREATE TABLE `t_shop_user` (
   `wechat_nick_name` varchar(32) DEFAULT NULL COMMENT '微信昵称',
   `wechat_open_id` varchar(64) DEFAULT NULL COMMENT '微信OpenID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COMMENT='用户';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COMMENT='User';
 
 /*Data for the table `t_shop_user` */
 
@@ -753,7 +753,7 @@ CREATE TABLE `t_sys_cfg` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间/注册时间',
   `modify_by` bigint DEFAULT NULL COMMENT '最后更新人',
   `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
-  `cfg_desc` text COMMENT '备注',
+  `cfg_desc` text COMMENT 'Remarks',
   `cfg_name` varchar(256) DEFAULT NULL COMMENT '参数名',
   `cfg_value` varchar(512) DEFAULT NULL COMMENT '参数值',
   PRIMARY KEY (`id`)
@@ -830,22 +830,22 @@ CREATE TABLE `t_sys_dict` (
 /*Data for the table `t_sys_dict` */
 
 insert  into `t_sys_dict`(`id`,`create_by`,`create_time`,`modify_by`,`modify_time`,`name`,`num`,`pid`,`tips`) values 
-(16,1,'2019-01-13 14:18:21',NULL,NULL,'状态','0',0,NULL),
-(17,1,'2019-01-13 14:18:21',NULL,NULL,'启用','1',16,NULL),
-(18,1,'2019-01-13 14:18:21',NULL,NULL,'禁用','2',16,NULL),
-(29,1,'2019-01-13 14:18:21',NULL,NULL,'性别','0',0,NULL),
-(30,1,'2019-01-13 14:18:21',NULL,NULL,'男','1',29,NULL),
-(31,1,'2019-01-13 14:18:21',NULL,NULL,'女','2',29,NULL),
-(35,1,'2019-01-13 14:18:21',NULL,NULL,'账号状态','0',0,NULL),
-(36,1,'2019-01-13 14:18:21',NULL,NULL,'启用','1',35,NULL),
-(37,1,'2019-01-13 14:18:21',NULL,NULL,'冻结','2',35,NULL),
-(38,1,'2019-01-13 14:18:21',NULL,NULL,'已删除','3',35,NULL),
-(53,1,'2019-01-13 14:18:21',NULL,NULL,'证件类型','0',0,NULL),
-(54,1,'2019-01-13 14:18:21',NULL,NULL,'身份证','1',53,NULL),
-(55,1,'2019-01-13 14:18:21',NULL,NULL,'护照','2',53,NULL),
-(68,1,'2019-01-13 14:18:21',1,'2019-01-13 14:18:21','是否','0',0,NULL),
-(69,1,'2019-01-13 14:18:21',1,'2019-01-13 14:18:21','是','1',68,NULL),
-(70,1,'2019-01-13 14:18:21',1,'2019-01-13 14:18:21','否','0',68,NULL);
+(16,1,'2019-01-13 14:18:21',NULL,NULL,'Status','0',0,NULL),
+(17,1,'2019-01-13 14:18:21',NULL,NULL,'Enable','1',16,NULL),
+(18,1,'2019-01-13 14:18:21',NULL,NULL,'Disable','2',16,NULL),
+(29,1,'2019-01-13 14:18:21',NULL,NULL,'Gender','0',0,NULL),
+(30,1,'2019-01-13 14:18:21',NULL,NULL,'Male','1',29,NULL),
+(31,1,'2019-01-13 14:18:21',NULL,NULL,'Female','2',29,NULL),
+(35,1,'2019-01-13 14:18:21',NULL,NULL,'Account Status','0',0,NULL),
+(36,1,'2019-01-13 14:18:21',NULL,NULL,'Unfreeze','1',35,NULL),
+(37,1,'2019-01-13 14:18:21',NULL,NULL,'Freeze','2',35,NULL),
+(38,1,'2019-01-13 14:18:21',NULL,NULL,'Deleted','3',35,NULL),
+(53,1,'2019-01-13 14:18:21',NULL,NULL,'Type of document','0',0,NULL),
+(54,1,'2019-01-13 14:18:21',NULL,NULL,'ID card','1',53,NULL),
+(55,1,'2019-01-13 14:18:21',NULL,NULL,'Passport','2',53,NULL),
+(68,1,'2019-01-13 14:18:21',1,'2019-01-13 14:18:21','whether','0',0,NULL),
+(69,1,'2019-01-13 14:18:21',1,'2019-01-13 14:18:21','Yes','1',68,NULL),
+(70,1,'2019-01-13 14:18:21',1,'2019-01-13 14:18:21','No','0',68,NULL);
 
 /*Table structure for table `t_sys_express` */
 
@@ -1052,21 +1052,21 @@ CREATE TABLE `t_sys_login_log` (
   `succeed` varchar(255) DEFAULT NULL,
   `userid` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COMMENT='登录日志';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COMMENT='Login Log';
 
 /*Data for the table `t_sys_login_log` */
 
 insert  into `t_sys_login_log`(`id`,`create_time`,`ip`,`logname`,`message`,`succeed`,`userid`) values 
-(1,'2019-11-18 20:05:52','127.0.0.1','登录日志',NULL,'成功',1),
-(2,'2019-11-20 10:45:10','127.0.0.1','登录日志',NULL,'成功',1),
-(3,'2023-04-22 16:18:23','127.0.0.1','登录日志',NULL,'成功',1),
-(4,'2023-04-22 16:22:20','127.0.0.1','退出日志',NULL,'成功',1),
-(5,'2023-05-02 18:41:03','127.0.0.1','登录日志',NULL,'成功',1),
-(6,'2023-05-04 13:15:22','127.0.0.1','登录日志',NULL,'成功',1),
-(7,'2023-05-04 14:11:04','127.0.0.1','退出日志',NULL,'成功',1),
-(8,'2023-05-04 16:04:46','127.0.0.1','登录日志',NULL,'成功',1),
-(9,'2023-05-05 16:45:09','127.0.0.1','退出日志',NULL,'成功',1),
-(10,'2023-05-05 16:45:11','127.0.0.1','登录日志',NULL,'成功',1);
+(1,'2019-11-18 20:05:52','127.0.0.1','Login Log',NULL,'Success',1),
+(2,'2019-11-20 10:45:10','127.0.0.1','Login Log',NULL,'Success',1),
+(3,'2023-04-22 16:18:23','127.0.0.1','Login Log',NULL,'Success',1),
+(4,'2023-04-22 16:22:20','127.0.0.1','Exit Log',NULL,'Success',1),
+(5,'2023-05-02 18:41:03','127.0.0.1','Login Log',NULL,'Success',1),
+(6,'2023-05-04 13:15:22','127.0.0.1','Login Log',NULL,'Success',1),
+(7,'2023-05-04 14:11:04','127.0.0.1','Exit Log',NULL,'Success',1),
+(8,'2023-05-04 16:04:46','127.0.0.1','Login Log',NULL,'Success',1),
+(9,'2023-05-05 16:45:09','127.0.0.1','Exit Log',NULL,'Success',1),
+(10,'2023-05-05 16:45:11','127.0.0.1','Login Log',NULL,'Success',1);
 
 /*Table structure for table `t_sys_menu` */
 
@@ -1081,12 +1081,12 @@ CREATE TABLE `t_sys_menu` (
   `code` varchar(32) NOT NULL COMMENT '编号',
   `component` varchar(64) DEFAULT NULL COMMENT '页面组件',
   `hidden` tinyint DEFAULT NULL COMMENT '是否隐藏',
-  `icon` varchar(32) DEFAULT NULL COMMENT '图标',
+  `icon` varchar(32) DEFAULT NULL COMMENT 'Icon',
   `ismenu` int NOT NULL COMMENT '是否是菜单1:菜单,0:按钮',
-  `isopen` int DEFAULT NULL COMMENT '是否默认打开1:是,0:否',
+  `isopen` int DEFAULT NULL COMMENT '是否默认打开1:Yes,0:No',
   `levels` int NOT NULL COMMENT '级别',
-  `name` varchar(64) NOT NULL COMMENT '名称',
-  `num` int NOT NULL COMMENT '顺序',
+  `name` varchar(64) NOT NULL COMMENT 'Name',
+  `num` int NOT NULL COMMENT 'Order',
   `pcode` varchar(64) NOT NULL COMMENT '父菜单编号',
   `pcodes` varchar(128) DEFAULT NULL COMMENT '递归父级菜单编号',
   `tips` varchar(32) DEFAULT NULL COMMENT '鼠标悬停提示信息',
@@ -1102,7 +1102,7 @@ insert  into `t_sys_menu`(`id`,`create_by`,`create_time`,`modify_by`,`modify_tim
 (2,1,'2019-07-31 22:04:30',1,'2019-03-11 22:25:38','cms','layout',0,'documentation',1,NULL,1,'CMS管理',3,'0','[0],',NULL,'/cms'),
 (3,1,'2019-07-31 22:04:30',1,'2019-06-02 10:09:09','operationMgr','layout',0,'operation',1,NULL,1,'运维管理',6,'0','[0],',NULL,'/optionMgr'),
 (4,1,'2019-07-31 22:04:30',1,'2019-04-16 18:59:15','mgr','views/system/user/index',0,'user',1,NULL,2,'用户管理',1,'system','[0],[system],',NULL,'/mgr'),
-(5,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','mgrAdd',NULL,0,NULL,0,NULL,3,'添加用户',1,'mgr','[0],[system],[mgr],',NULL,'/mgr/add'),
+(5,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','mgrAdd',NULL,0,NULL,0,NULL,3,'Add User',1,'mgr','[0],[system],[mgr],',NULL,'/mgr/add'),
 (6,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','mgrEdit',NULL,0,NULL,0,NULL,3,'修改用户',2,'mgr','[0],[system],[mgr],',NULL,'/mgr/edit'),
 (7,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','mgrDelete',NULL,0,NULL,0,0,3,'删除用户',3,'mgr','[0],[system],[mgr],',NULL,'/mgr/delete'),
 (8,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','mgrReset',NULL,0,NULL,0,0,3,'重置密码',4,'mgr','[0],[system],[mgr],',NULL,'/mgr/reset'),
@@ -1145,8 +1145,8 @@ insert  into `t_sys_menu`(`id`,`create_by`,`create_time`,`modify_by`,`modify_tim
 (45,1,'2019-03-19 10:25:05',1,'2019-03-19 10:25:05','file','views/cms/file/index',0,'file',1,NULL,2,'文件存储',7,'shopMgr','[0],[shopMgr],',NULL,'/fileMgr'),
 (46,1,'2019-03-11 22:30:17',1,'2019-03-11 22:30:17','editArticle','views/cms/article/edit.vue',0,'articleEdit',1,NULL,2,'新建文章',1,'cms','[0],[cms],',NULL,'/cms/articleEdit'),
 (47,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','taskLog','views/system/task/taskLog',1,'task',1,NULL,2,'任务日志',4,'system','[0],[system],',NULL,'/taskLog'),
-(48,1,'2019-07-31 22:04:30',1,'2019-06-02 10:25:31','log','views/operation/log/index',0,'log',1,NULL,2,'业务日志',6,'operationMgr','[0],[operationMgr],',NULL,'/log'),
-(49,1,'2019-07-31 22:04:30',1,'2019-06-02 10:25:36','loginLog','views/operation/loginLog/index',0,'logininfor',1,NULL,2,'登录日志',6,'operationMgr','[0],[operationMgr],',NULL,'/loginLog'),
+(48,1,'2019-07-31 22:04:30',1,'2019-06-02 10:25:31','log','views/operation/log/index',0,'log',1,NULL,2,'Business Log',6,'operationMgr','[0],[operationMgr],',NULL,'/log'),
+(49,1,'2019-07-31 22:04:30',1,'2019-06-02 10:25:36','loginLog','views/operation/loginLog/index',0,'logininfor',1,NULL,2,'Login Log',6,'operationMgr','[0],[operationMgr],',NULL,'/loginLog'),
 (50,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','logClear',NULL,0,NULL,0,NULL,3,'清空日志',3,'log','[0],[system],[log],',NULL,'/log/delLog'),
 (51,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','logDetail',NULL,0,NULL,0,NULL,3,'日志详情',3,'log','[0],[system],[log],',NULL,'/log/detail'),
 (52,1,'2019-07-31 22:04:30',1,'2019-07-31 22:04:30','loginLogClear',NULL,0,NULL,0,NULL,3,'清空登录日志',1,'loginLog','[0],[system],[loginLog],',NULL,'/loginLog/delLoginLog'),
@@ -1227,70 +1227,70 @@ CREATE TABLE `t_sys_operation_log` (
 /*Data for the table `t_sys_operation_log` */
 
 insert  into `t_sys_operation_log`(`id`,`classname`,`create_time`,`logname`,`logtype`,`message`,`method`,`succeed`,`userid`) values 
-(1,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:42:56','编辑商品类别','业务日志','name=Phone;;;','save','成功',1),
-(2,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:43:14','编辑商品类别','业务日志','name=TV;;;','save','成功',1),
-(3,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:43:27','编辑商品类别','业务日志','name=Notebook;;;','save','成功',1),
-(4,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:43:48','编辑商品类别','业务日志','name=Home Appliances;;;','save','成功',1),
-(5,'cn.enilu.flash.api.controller.system.ExpressController','2023-05-02 18:53:10','启用禁用物流公司','业务日志','disabled=false;id=6;','changeIsOnSale','成功',1),
-(6,'cn.enilu.flash.api.controller.system.ExpressController','2023-05-02 18:53:11','启用禁用物流公司','业务日志','disabled=true;id=6;','changeIsOnSale','成功',1),
-(7,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:36:30','编辑商品类别','业务日志','name=Notebook;;;','save','成功',1),
-(8,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:36:35','编辑商品类别','业务日志','name=TV;;;','save','成功',1),
-(9,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:38:17','删除商品类别','业务日志','id=16;','remove','成功',1),
-(10,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:38:23','编辑商品类别','业务日志','name=Redmi Note;;;','save','成功',1),
-(11,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-02 20:09:49','上架/下架商品','业务日志','id=5;isOnSale=true;','changeIsOnSale','成功',1),
-(12,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-02 20:11:57','保存商品基本信息','业务日志','','saveBaseInfo','成功',1),
-(13,'cn.enilu.flash.api.controller.shop.GoodsSkuController','2023-05-02 20:15:50','编辑商品SKU','业务日志','name=null;;;','save','成功',1),
-(14,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-02 20:15:55','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(15,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:29','编辑商品类别','业务日志','name=XiaoMi;;;','save','成功',1),
-(16,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:37','编辑商品类别','业务日志','name=HeiSha;;;','save','成功',1),
-(17,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:47','编辑商品类别','业务日志','name=RedmiNumber;;;','save','成功',1),
-(18,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:55','编辑商品类别','业务日志','name=RedmiBook G;;;','save','成功',1),
-(19,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:05','编辑商品类别','业务日志','name=XiaoMiNotePro;;;','save','成功',1),
-(20,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:15','编辑商品类别','业务日志','name=XiaoMiNoteAir;;;','save','成功',1),
-(21,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:25','编辑商品类别','业务日志','name=XiaoMiGame;;;','save','成功',1),
-(22,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:57','编辑商品类别','业务日志','name=32-40inch;;;','save','成功',1),
-(23,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:09','编辑商品类别','业务日志','name=43inch;;;','save','成功',1),
-(24,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:19','编辑商品类别','业务日志','name=49-50inch;;;','save','成功',1),
-(25,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:26','编辑商品类别','业务日志','name=55-60inch;;;','save','成功',1),
-(26,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:33','编辑商品类别','业务日志','name=65-98inch;;;','save','成功',1),
-(27,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:19:36','编辑商品类别','业务日志','name=LaserP TV;;;','save','成功',1),
-(28,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:19:43','编辑商品类别','业务日志','name=82inch;;;','save','成功',1),
-(29,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:19:50','编辑商品类别','业务日志','name=65inchOLED;;;','save','成功',1),
-(30,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:20:10','编辑商品类别','业务日志','name=Refrigerator;;;','save','成功',1),
-(31,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:20:29','编辑商品类别','业务日志','name=conditioners;;;','save','成功',1),
-(32,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:19','编辑商品类别','业务日志','name=V-Conditioner;;;','save','成功',1),
-(33,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:42','编辑商品类别','业务日志','name=washing machine;;;','save','成功',1),
-(34,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:47','编辑商品类别','业务日志','name=washing machine;;;','save','成功',1),
-(35,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:56','编辑商品类别','业务日志','name=Dryer;;;','save','成功',1),
-(36,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:23:33','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(37,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:24:20','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(38,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:24:49','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(39,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:25:33','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(40,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:26:03','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(41,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:26:39','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(42,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:12','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(43,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:34','上架/下架商品','业务日志','id=10;isOnSale=false;','changeIsOnSale','成功',1),
-(44,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:35','上架/下架商品','业务日志','id=8;isOnSale=false;','changeIsOnSale','成功',1),
-(45,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:41','上架/下架商品','业务日志','id=17;isOnSale=false;','changeIsOnSale','成功',1),
-(46,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:49','上架/下架商品','业务日志','id=14;isOnSale=false;','changeIsOnSale','成功',1),
-(47,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:28:28','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(48,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:28:37','上架/下架商品','业务日志','id=17;isOnSale=true;','changeIsOnSale','成功',1),
-(49,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:28:50','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(50,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:08','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(51,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:14','上架/下架商品','业务日志','id=13;isOnSale=false;','changeIsOnSale','成功',1),
-(52,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:29','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(53,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:30','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(54,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:56','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(55,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:30:22','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(56,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:30:47','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(57,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:06','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(58,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:34','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(59,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:53','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(60,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:58','上架/下架商品','业务日志','id=3;isOnSale=false;','changeIsOnSale','成功',1),
-(61,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:32:15','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(62,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:32:15','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(63,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:32:47','编辑商品','业务日志','名称=null;;;','save','成功',1),
-(64,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 16:19:37','保存商品基本信息','业务日志','','saveBaseInfo','成功',1);
+(1,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:42:56','Edit Product Category','Business Log','name=Phone;;;','save','Success',1),
+(2,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:43:14','Edit Product Category','Business Log','name=TV;;;','save','Success',1),
+(3,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:43:27','Edit Product Category','Business Log','name=Notebook;;;','save','Success',1),
+(4,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 18:43:48','Edit Product Category','Business Log','name=Home Appliances;;;','save','Success',1),
+(5,'cn.enilu.flash.api.controller.system.ExpressController','2023-05-02 18:53:10','启用禁用物流公司','Business Log','disabled=false;id=6;','changeIsOnSale','Success',1),
+(6,'cn.enilu.flash.api.controller.system.ExpressController','2023-05-02 18:53:11','启用禁用物流公司','Business Log','disabled=true;id=6;','changeIsOnSale','Success',1),
+(7,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:36:30','Edit Product Category','Business Log','name=Notebook;;;','save','Success',1),
+(8,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:36:35','Edit Product Category','Business Log','name=TV;;;','save','Success',1),
+(9,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:38:17','删除商品类别','Business Log','id=16;','remove','Success',1),
+(10,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-02 19:38:23','Edit Product Category','Business Log','name=Redmi Note;;;','save','Success',1),
+(11,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-02 20:09:49','Uploaded/下架商品','Business Log','id=5;isOnSale=true;','changeIsOnSale','Success',1),
+(12,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-02 20:11:57','保存商品基本信息','Business Log','','saveBaseInfo','Success',1),
+(13,'cn.enilu.flash.api.controller.shop.GoodsSkuController','2023-05-02 20:15:50','编辑商品SKU','Business Log','name=null;;;','save','Success',1),
+(14,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-02 20:15:55','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(15,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:29','Edit Product Category','Business Log','name=XiaoMi;;;','save','Success',1),
+(16,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:37','Edit Product Category','Business Log','name=HeiSha;;;','save','Success',1),
+(17,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:47','Edit Product Category','Business Log','name=RedmiNumber;;;','save','Success',1),
+(18,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:16:55','Edit Product Category','Business Log','name=RedmiBook G;;;','save','Success',1),
+(19,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:05','Edit Product Category','Business Log','name=XiaoMiNotePro;;;','save','Success',1),
+(20,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:15','Edit Product Category','Business Log','name=XiaoMiNoteAir;;;','save','Success',1),
+(21,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:25','Edit Product Category','Business Log','name=XiaoMiGame;;;','save','Success',1),
+(22,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:17:57','Edit Product Category','Business Log','name=32-40inch;;;','save','Success',1),
+(23,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:09','Edit Product Category','Business Log','name=43inch;;;','save','Success',1),
+(24,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:19','Edit Product Category','Business Log','name=49-50inch;;;','save','Success',1),
+(25,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:26','Edit Product Category','Business Log','name=55-60inch;;;','save','Success',1),
+(26,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:18:33','Edit Product Category','Business Log','name=65-98inch;;;','save','Success',1),
+(27,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:19:36','Edit Product Category','Business Log','name=LaserP TV;;;','save','Success',1),
+(28,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:19:43','Edit Product Category','Business Log','name=82inch;;;','save','Success',1),
+(29,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:19:50','Edit Product Category','Business Log','name=65inchOLED;;;','save','Success',1),
+(30,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:20:10','Edit Product Category','Business Log','name=Refrigerator;;;','save','Success',1),
+(31,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:20:29','Edit Product Category','Business Log','name=conditioners;;;','save','Success',1),
+(32,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:19','Edit Product Category','Business Log','name=V-Conditioner;;;','save','Success',1),
+(33,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:42','Edit Product Category','Business Log','name=washing machine;;;','save','Success',1),
+(34,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:47','Edit Product Category','Business Log','name=washing machine;;;','save','Success',1),
+(35,'cn.enilu.flash.api.controller.shop.CategoryController','2023-05-04 13:21:56','Edit Product Category','Business Log','name=Dryer;;;','save','Success',1),
+(36,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:23:33','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(37,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:24:20','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(38,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:24:49','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(39,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:25:33','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(40,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:26:03','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(41,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:26:39','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(42,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:12','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(43,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:34','Uploaded/下架商品','Business Log','id=10;isOnSale=false;','changeIsOnSale','Success',1),
+(44,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:35','Uploaded/下架商品','Business Log','id=8;isOnSale=false;','changeIsOnSale','Success',1),
+(45,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:41','Uploaded/下架商品','Business Log','id=17;isOnSale=false;','changeIsOnSale','Success',1),
+(46,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:27:49','Uploaded/下架商品','Business Log','id=14;isOnSale=false;','changeIsOnSale','Success',1),
+(47,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:28:28','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(48,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:28:37','Uploaded/下架商品','Business Log','id=17;isOnSale=true;','changeIsOnSale','Success',1),
+(49,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:28:50','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(50,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:08','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(51,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:14','Uploaded/下架商品','Business Log','id=13;isOnSale=false;','changeIsOnSale','Success',1),
+(52,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:29','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(53,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:30','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(54,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:29:56','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(55,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:30:22','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(56,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:30:47','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(57,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:06','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(58,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:34','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(59,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:53','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(60,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:31:58','Uploaded/下架商品','Business Log','id=3;isOnSale=false;','changeIsOnSale','Success',1),
+(61,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:32:15','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(62,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:32:15','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(63,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 13:32:47','编辑商品','Business Log','Name=null;;;','save','Success',1),
+(64,'cn.enilu.flash.api.controller.shop.GoodsController','2023-05-04 16:19:37','保存商品基本信息','Business Log','','saveBaseInfo','Success',1);
 
 /*Table structure for table `t_sys_relation` */
 
@@ -1471,7 +1471,7 @@ DROP TABLE IF EXISTS `t_sys_task_log`;
 CREATE TABLE `t_sys_task_log` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `exec_at` datetime DEFAULT NULL COMMENT '执行时间',
-  `exec_success` int DEFAULT NULL COMMENT '执行结果（成功:1、失败:0)',
+  `exec_success` int DEFAULT NULL COMMENT '执行结果（Success:1、Fail:0)',
   `id_task` bigint DEFAULT NULL,
   `job_exception` text COMMENT '抛出异常',
   `name` varchar(50) DEFAULT NULL COMMENT '任务名',

@@ -17,7 +17,7 @@
     methods: {
       init() {
         this.$notify({
-          title: '提示',
+          title: 'Tips',
           message: '用户名密码参考：application.properties',
           duration: 3000
         })

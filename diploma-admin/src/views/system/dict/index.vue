@@ -28,7 +28,7 @@
           {{scope.row.id}}
         </template>
       </el-table-column>
-      <el-table-column label="名称">
+      <el-table-column label="Name">
         <template slot-scope="scope">
           {{scope.row.name}}
         </template>
@@ -38,7 +38,7 @@
           {{scope.row.detail}}
         </template>
       </el-table-column>
-      <el-table-column label="操作">
+      <el-table-column label="Operation">
         <template slot-scope="scope">
           <el-button type="text" size="mini" icon="el-icon-edit" @click.native="editItem(scope.row)" v-permission="['/dict/update']">{{ $t('button.edit') }}</el-button>
           <el-button type="text" size="mini" icon="el-icon-delete" @click.native="removeItem(scope.row)" v-permission="['/dict/delete']">{{ $t('button.delete') }}</el-button>
@@ -55,7 +55,7 @@
       width="60%">
       <el-form ref="form" :model="form" :rules="rules" label-width="120px">
 
-        <el-form-item label="名称" prop="name">
+        <el-form-item label="Name" prop="name">
           <el-input v-model="form.name"  minlength=1></el-input>
         </el-form-item>
         <el-form-item
@@ -64,15 +64,15 @@
           :key="rec.key"
           :prop="'details.' + index + '.value'"
           :rules="{
-            required: true, message: '不能为空', trigger: 'blur'
+            required: true, message: 'Cannot be empty', trigger: 'blur'
           }"
         >
           <el-col :span="9">
-          <el-input v-model="rec.key" placeholder="值"></el-input>
+          <el-input v-model="rec.key" placeholder="Value"></el-input>
           </el-col>
           <el-col class="line" :span="1">&nbsp; </el-col>
           <el-col :span="9">
-          <el-input v-model="rec.value" placeholder="名称"></el-input>
+          <el-input v-model="rec.value" placeholder="Name"></el-input>
           </el-col>
           <el-col :span="4">&nbsp;
           <el-button @click.prevent="removeDetail(rec)" type="danger" icon="el-icon-delete" >{{ $t('button.delete')

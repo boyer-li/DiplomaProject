@@ -14,7 +14,7 @@
             size="mini"
             type="datetimerange"
             :picker-options="pickerOptions"
-            range-separator="至"
+            range-separator="to"
             start-placeholder="发布起始日期"
             end-placeholder="发布截至日期"
             value-format="yyyyMMddHHmmss"

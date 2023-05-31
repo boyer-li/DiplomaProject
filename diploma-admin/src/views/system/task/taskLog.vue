@@ -21,7 +21,7 @@
       </el-table-column>
       <el-table-column label="执行结果">
         <template slot-scope="scope">
-          {{scope.row.execSuccess === 1 ? '成功' : '失败'}}
+          {{scope.row.execSuccess === 1 ? 'Success' : 'Fail'}}
         </template>
       </el-table-column>
       <el-table-column label="异常信息">

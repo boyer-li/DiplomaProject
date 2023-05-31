@@ -21,15 +21,15 @@
           <span >{{scope.row.fullname}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="顺序" >
+      <el-table-column label="Order" >
         <template slot-scope="scope">
           <span >{{scope.row.num}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="操作" >
+      <el-table-column label="Operation" >
         <template slot-scope="scope">
           <el-button type="text" size="mini" icon="el-icon-edit"  @click.native="editItem(scope.row)" v-permission="['/dept/update']">{{ $t('button.edit') }}</el-button>
-          <el-button type="text" size="mini" icon="el-icon-delete" @click="removeItem(scope.row)" v-permission="['/dept/delete']">删除</el-button>
+          <el-button type="text" size="mini" icon="el-icon-delete" @click="removeItem(scope.row)" v-permission="['/dept/delete']">Delete</el-button>
         </template>
       </el-table-column>
     </tree-table>
@@ -41,7 +41,7 @@
       <el-form ref="form" :model="form" :rules="rules" label-width="120px">
         <el-row>
           <el-col :span="12">
-            <el-form-item label="名称" prop="simplename">
+            <el-form-item label="Name" prop="simplename">
               <el-input v-model="form.simplename" minlength=1></el-input>
             </el-form-item>
           </el-col>

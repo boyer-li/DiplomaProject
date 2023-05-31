@@ -8,9 +8,9 @@
                 v-model="rangeDate"
                 size="mini"
                 type="datetimerange"
-                range-separator="至"
-                start-placeholder="发送起始日期"
-                end-placeholder="发送截至日期"
+                range-separator="to"
+                start-placeholder="Send start date"
+                end-placeholder="Sending Deadline"
                 value-format="yyyyMMddHHmmss"
                 align="right">
               </el-date-picker>
@@ -56,9 +56,9 @@
                     {{scope.row.type==0?"短信":"邮件"}}
                 </template>
             </el-table-column>
-            <el-table-column label="状态">
+            <el-table-column label="Status">
               <template slot-scope="scope">
-                {{scope.row.state==1?"成功":"失败"}}
+                {{scope.row.state==1?"Success":"Fail"}}
               </template>
             </el-table-column>
         </el-table>

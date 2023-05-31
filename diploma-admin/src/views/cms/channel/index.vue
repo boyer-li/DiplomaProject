@@ -17,7 +17,7 @@
           {{scope.row.id}}
         </template>
       </el-table-column>
-      <el-table-column label="名称">
+      <el-table-column label="Name">
         <template slot-scope="scope">
           {{scope.row.name}}
         </template>
@@ -36,7 +36,7 @@
       <el-form ref="form" :model="form" :rules="rules" label-width="150px">
         <el-row>
           <el-col :span="12">
-            <el-form-item label="名称" prop="name">
+            <el-form-item label="Name" prop="name">
               <el-input v-model="form.name" minlength=1></el-input>
             </el-form-item>
           </el-col>

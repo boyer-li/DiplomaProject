@@ -67,9 +67,9 @@ export default {
       this.fetchData()
     },
     clear() {
-      this.$confirm('确定清空数据?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('确定清空数据?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         clear().then(response => {

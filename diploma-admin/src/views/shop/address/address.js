@@ -4,7 +4,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加收货地址',
+      formTitle: 'Add shipping address',
       isAdd: true,
       form: {
         idUser:'',
@@ -117,7 +117,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加收货地址',
+      this.formTitle = 'Add shipping address',
       this.formVisible = true
       this.isAdd = true
     },
@@ -162,7 +162,7 @@ export default {
       if (this.checkSel()) {
         this.isAdd = false
         this.form = this.selRow
-        this.formTitle = '编辑收货地址'
+        this.formTitle = 'Edit shipping address'
         this.formVisible = true
       }
     },

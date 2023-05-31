@@ -89,9 +89,9 @@ export default {
       this.fetchData()
     },
     clear(){
-      this.$confirm('确认清楚所有历史消息?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('确认清楚所有历史消息?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
          clear().then(response => {

@@ -160,7 +160,7 @@ export default {
           this.form.idCategory === '' ||
           this.form.descript === '') {
           this.$message({
-            message: '请输入必要的商品项目',
+            message: 'Please enter the necessary product items',
             type: 'error'
           })
           return

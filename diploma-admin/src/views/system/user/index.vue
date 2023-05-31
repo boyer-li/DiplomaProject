@@ -9,7 +9,7 @@
           <el-input v-model="listQuery.name" size="mini" placeholder="请输入姓名"></el-input>
         </el-col>
         <el-col :span="6">
-          <dict-select v-model="listQuery.sex" dict-name="性别" placeholder="请选择性别"/>
+          <dict-select v-model="listQuery.sex" dict-name="Gender" placeholder="请选择性别"/>
         </el-col>
         <el-col :span="6">
           <el-button type="success" size="mini" icon="el-icon-search" @click.native="search">{{
@@ -54,7 +54,7 @@
           {{ scope.row.name }}
         </template>
       </el-table-column>
-      <el-table-column label="性别">
+      <el-table-column label="Gender">
         <template slot-scope="scope">
           {{ scope.row.sexName }}
         </template>
@@ -84,7 +84,7 @@
           {{ scope.row.createTime }}
         </template>
       </el-table-column>
-      <el-table-column label="状态">
+      <el-table-column label="Status">
         <template slot-scope="scope">
           {{ scope.row.statusName }}
         </template>
@@ -124,7 +124,7 @@
           </el-col>
 
           <el-col :span="12">
-            <el-form-item label="性别">
+            <el-form-item label="Gender">
               <el-radio-group v-model="form.sex">
                 <el-radio :label="1">Male</el-radio>
                 <el-radio :label="2">Female</el-radio>

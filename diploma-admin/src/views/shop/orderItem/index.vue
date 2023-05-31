@@ -13,27 +13,27 @@
 
         <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
                   @current-change="handleCurrentChange">
-            <el-table-column label="所属订单id">
+            <el-table-column label="Order id">
                 <template slot-scope="scope">
                     {{scope.row.idOrder}}
                 </template>
             </el-table-column>
-            <el-table-column label="商品id">
+            <el-table-column label="Product id">
                 <template slot-scope="scope">
                     {{scope.row.idGoods}}
                 </template>
             </el-table-column>
-            <el-table-column label="单价">
+            <el-table-column label="Unit price">
                 <template slot-scope="scope">
                     {{scope.row.price}}
                 </template>
             </el-table-column>
-            <el-table-column label="数量">
+            <el-table-column label="Quantity">
                 <template slot-scope="scope">
                     {{scope.row.amount}}
                 </template>
             </el-table-column>
-            <el-table-column label="合计">
+            <el-table-column label="Total">
                 <template slot-scope="scope">
                     {{scope.row.totalPrice}}
                 </template>
@@ -60,27 +60,27 @@
             <el-form ref="form" :model="form" :rules="rules" label-width="150px">
                 <el-row>
                     <el-col :span="12">
-                        <el-form-item label="所属订单id"  >
+                        <el-form-item label="Order id"  >
                             <el-input v-model="form.idOrder" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="商品id"  >
+                        <el-form-item label="Product id"  >
                             <el-input v-model="form.idGoods" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="单价"  >
+                        <el-form-item label="Unit price"  >
                             <el-input v-model="form.price" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="数量"  >
+                        <el-form-item label="Quantity"  >
                             <el-input v-model="form.amount" minlength=1></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="12">
-                        <el-form-item label="合计"  >
+                        <el-form-item label="Total"  >
                             <el-input v-model="form.totalPrice" minlength=1></el-input>
                         </el-form-item>
                     </el-col>

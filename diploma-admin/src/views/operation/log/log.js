@@ -6,10 +6,10 @@ export default {
     return {
       options: [{
         value: '1',
-        label: '业务日志'
+        label: 'Business Log'
       }, {
         value: '2',
-        label: '异常日志'
+        label: 'Exception Log'
       }
       ],
       form: {
@@ -78,9 +78,9 @@ export default {
       this.fetchData()
     },
     clear() {
-      this.$confirm('确定清空数据?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('确定清空数据?', 'Tips', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         clear().then(response => {

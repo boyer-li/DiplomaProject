@@ -26,13 +26,13 @@ public class GoodsSku extends BaseEntity {
     private String codeName;
     @Column(name="id_goods",columnDefinition = "BIGINT COMMENT '商品id'")
     private Long idGoods;
-    @Column(name="price",columnDefinition = "VARCHAR(32) COMMENT '价格'")
+    @Column(name="price",columnDefinition = "VARCHAR(32) COMMENT 'Price'")
     private BigDecimal price;
-    @Column(name="marketing_price",columnDefinition = "VARCHAR(32) COMMENT '市场价,Original Price'")
+    @Column(name="marketing_price",columnDefinition = "VARCHAR(32) COMMENT 'Market Price,Original Price'")
     private BigDecimal marketingPrice;
-    @Column(name="stock",columnDefinition = "INT COMMENT '库存'")
+    @Column(name="stock",columnDefinition = "INT COMMENT 'Inventory'")
     private Integer stock;
-    @Column(columnDefinition = "TINYINT COMMENT '是否删除1:是,0:否'")
+    @Column(columnDefinition = "TINYINT COMMENT '是否删除1:Yes,0:No'")
     private Boolean isDeleted=false;
 
 }

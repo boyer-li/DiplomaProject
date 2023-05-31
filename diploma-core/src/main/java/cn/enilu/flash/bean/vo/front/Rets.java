@@ -7,7 +7,7 @@ public class Rets {
     public static  final Integer TOKEN_EXPIRE=50014;
 
     public static Ret success(Object data) {
-        return new Ret(Rets.SUCCESS, "成功", data);
+        return new Ret(Rets.SUCCESS, "Success", data);
     }
 
     public static Ret failure(String msg) {
@@ -15,7 +15,7 @@ public class Rets {
     }
 
     public static Ret success() {
-        return new Ret(Rets.SUCCESS, "成功", null);
+        return new Ret(Rets.SUCCESS, "Success", null);
     }
     public static  Ret expire(){
         return new Ret(Rets.TOKEN_EXPIRE,"token 过期",null);

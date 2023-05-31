@@ -10,7 +10,7 @@
       border
       :default-expand-all="false"
       :tree-props="{children: 'children', hasChildren: 'hasChildren'}">
-      <el-table-column label="名称" >
+      <el-table-column label="Name" >
         <template slot-scope="scope">
           <el-button type="text" @click="edit(scope.row)">{{scope.row.name}}</el-button>
         </template>
@@ -20,7 +20,7 @@
           <span >{{scope.row.code}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="图标">
+      <el-table-column label="Icon">
         <template slot-scope="scope">
           <svg-icon :icon-class="scope.row.icon" />
         </template>
@@ -45,12 +45,12 @@
           <span >{{scope.row.hidden}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="顺序">
+      <el-table-column label="Order">
         <template slot-scope="scope">
           <span >{{scope.row.num}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="操作" >
+      <el-table-column label="Operation" >
         <template slot-scope="scope">
           <el-button type="text" size="mini" icon="el-icon-edit" @click="edit(scope.row)" v-permission="['/menu/edit']">{{ $t('button.edit') }}</el-button>
           <el-button type="text" size="mini" icon="el-icon-delete" @click="remove(scope.row)" v-permission="['/menu/remove']">{{ $t('button.delete') }}</el-button>
@@ -65,7 +65,7 @@
         <el-form ref="form" :model="form" :rules="rules" label-width="120px">
           <el-row>
             <el-col :span="12">
-              <el-form-item label="名称" prop="name">
+              <el-form-item label="Name" prop="name">
                 <el-input v-model="form.name" minlength=1></el-input>
               </el-form-item>
             </el-col>
@@ -86,8 +86,8 @@
             <el-col :span="12"  v-show="form.ismenu">
               <el-form-item label="是否隐藏">
                 <el-radio-group v-model="form.hidden">
-                  <el-radio :label="true">是</el-radio>
-                  <el-radio :label="false">否</el-radio>
+                  <el-radio :label="true">Yes</el-radio>
+                  <el-radio :label="false">No</el-radio>
                 </el-radio-group>
               </el-form-item>
             </el-col>
@@ -97,7 +97,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="父菜单" >
+              <el-form-item label="Parent Menu" >
                 <treeselect v-model="form.pcode"  :options="treeData"  placeholder="请选择父菜单/顶级菜单目录无需选择"/>
               </el-form-item>
             </el-col>
@@ -108,7 +108,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="12" v-show="form.ismenu===1">
-              <el-form-item label="图标">
+              <el-form-item label="Icon">
                 <el-popover
                   placement="bottom-start"
                   width="460"

@@ -161,7 +161,7 @@ public class WeixinService {
             logger.info("获取微信用户基本信息失败", Mapl.cell(object, "errmsg"));
         } else {
             if (StringUtil.equals(StringUtil.sNull(Mapl.cell(object, "errcode")), "0")) {
-                logger.error("用户:{}没有关注该公众号", openId);
+                logger.error("User:{}没有关注该公众号", openId);
             } else {
                 WechatInfo wechatInfo = new WechatInfo();
                 wechatInfo.setOpenId(openId);

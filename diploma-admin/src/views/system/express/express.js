@@ -169,7 +169,7 @@ export default {
             this.fetchData()
           }).catch(err => {
             this.$notify.error({
-              title: '错误',
+              title: 'Error',
               message: err
             })
           })

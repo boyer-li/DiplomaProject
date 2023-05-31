@@ -33,7 +33,7 @@ public class TaskLog{
     @Column(columnDefinition = "DATETime COMMENT '执行时间'")
     private Date execAt;
 
-    @Column(columnDefinition = "INTEGER COMMENT '执行结果（成功:1、失败:0)'")
+    @Column(columnDefinition = "INTEGER COMMENT '执行结果（Success:1、Fail:0)'")
     private int execSuccess;
 
     @Column(columnDefinition = "TEXT COMMENT '抛出异常'")

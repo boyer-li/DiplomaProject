@@ -17,7 +17,7 @@ import java.util.Date;
  * @date ：Created in 2019/10/29 17:41
  */
 @Data
-@Table(appliesTo = "t_shop_user",comment = "用户")
+@Table(appliesTo = "t_shop_user",comment = "User")
 @Entity(name="t_shop_user")
 @JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 public class ShopUser  implements Serializable {
@@ -38,7 +38,7 @@ public class ShopUser  implements Serializable {
     private String nickName;
     @Column(columnDefinition = "VARCHAR(64) COMMENT '头像'")
     private String avatar;
-    @Column(columnDefinition = "VARCHAR(18) COMMENT '性别:male;female'")
+    @Column(columnDefinition = "VARCHAR(18) COMMENT 'Gender:male;female'")
     private String gender;
     @Column(columnDefinition = "DATETIME COMMENT '最后登陆时间'")
     private Date lastLoginTime;

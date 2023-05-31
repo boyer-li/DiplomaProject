@@ -22,7 +22,7 @@ export default {
         }
       },
       formVisible: false,
-      formTitle: '添加用户',
+      formTitle: 'Add User',
       deptTree: {
         show: false,
         data: [],
@@ -54,7 +54,7 @@ export default {
         ],
         name: [
           { required: true, message: '请输入用户名', trigger: 'blur' },
-          { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
+          { min: 2, max: 20, message: 'Length from 2 to 20 characters', trigger: 'blur' }
         ],
         email: [
           { required: true, message: '请输入email', trigger: 'blur' }
@@ -155,7 +155,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加用户'
+      this.formTitle = 'Add User'
       this.formVisible = true
       this.isAdd = true
     },
@@ -178,7 +178,7 @@ export default {
           if (this.validPasswd()) {
             var form = self.form
             if (form.status === true) {
-              //启用
+              //Enable
               form.status = 1
             } else {
               //冻结
@@ -188,7 +188,7 @@ export default {
             form.createtime = parseTime(form.createtime)
             saveUser(form).then(response => {
               this.$message({
-                message: '提交成功',
+                message: 'Submitted successfully',
                 type: 'success'
               })
               this.fetchData()
@@ -211,7 +211,7 @@ export default {
         return true
       }
       this.$message({
-        message: '请选中操作项',
+        message: 'Please check the operation item',
         type: 'warning'
       })
       return false
@@ -221,7 +221,7 @@ export default {
         this.isAdd = false
 
         this.form = this.selRow
-        this.form.status = this.selRow.statusName === '启用'
+        this.form.status = this.selRow.statusName === 'Enable'
         this.form.password = ''
         this.formTitle = '修改用户'
         this.formVisible = true
@@ -231,14 +231,14 @@ export default {
       if (this.checkSel()) {
         var id = this.selRow.id
 
-        this.$confirm('确定删除该记录?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
+        this.$confirm('Sure to delete?', 'Tips', {
+          confirmButtonText: 'Confirm',
+          cancelButtonText: 'Cancel',
           type: 'warning'
         }).then(() => {
           remove(id).then(response => {
             this.$message({
-              message: '删除成功',
+              message: 'Deleted successfully',
               type: 'success'
             })
             this.fetchData()
@@ -278,7 +278,7 @@ export default {
         this.roleDialog.visible = false
         this.fetchData()
         this.$message({
-          message: '提交成功',
+          message: 'Submitted successfully',
           type: 'success'
         })
       })

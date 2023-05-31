@@ -108,7 +108,7 @@ public class JobService {
             logger.error("时间表达式错误（" + job.getJobName() + "," + job.getJobGroup() + "）," + job.getCronExpression());
             return false;
         } else {
-            // 任务名称和任务组设置规则：    // 名称：task_1 ..    // 组 ：group_1 ..
+            // 任务名称和任务组设置规则：    // Name：task_1 ..    // 组 ：group_1 ..
             TriggerKey triggerKey = TriggerKey.triggerKey(job.getJobName(), job.getJobGroup());
             CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
             // 不存在，创建一个

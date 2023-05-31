@@ -295,7 +295,7 @@ public class ConstantFactory implements IConstantFactory {
      */
     @Override
     public String getSexName(Integer sex) {
-        return getDictsByName("性别", String.valueOf(sex));
+        return getDictsByName("Gender", String.valueOf(sex));
     }
 
     @Override

@@ -71,8 +71,8 @@
                     <el-col :span="12">
                         <el-form-item label="是否禁用"  >
                           <el-radio-group v-model="form.disabled">
-                            <el-radio :label="false">否</el-radio>
-                            <el-radio :label="true">是</el-radio>
+                            <el-radio :label="false">No</el-radio>
+                            <el-radio :label="true">Yes</el-radio>
                           </el-radio-group>
                         </el-form-item>
                     </el-col>

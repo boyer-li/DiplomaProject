@@ -28,13 +28,13 @@
      <el-table-column type="expand">
        <template slot-scope="props">
          <el-form label-position="left" inline class="flash-table-expand">
-           <el-form-item label="用户id">
+           <el-form-item label="User id">
              <span>{{ props.row.userid }}</span>
            </el-form-item>
            <el-form-item label="日志名称">
              <span>{{ props.row.logname }}</span>
            </el-form-item>
-           <el-form-item label="用户">
+           <el-form-item label="User">
              <span>{{ props.row.userName }}</span>
            </el-form-item>
            <el-form-item label="IP">
@@ -51,7 +51,7 @@
      </el-table-column>
 
      <el-table-column
-       label="用户"
+       label="User"
        prop="userName">
      </el-table-column>
      <el-table-column

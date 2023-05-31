@@ -3,14 +3,14 @@
 
         <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
                   @current-change="handleCurrentChange">
-            <el-table-column label="用户">
+            <el-table-column label="User">
                 <template slot-scope="scope">
                   <router-link :to="{path:'shopUserDetail?id='+scope.row.user.id}">
                     {{scope.row.user.mobile}}
                   </router-link>
                 </template>
             </el-table-column>
-            <el-table-column label="商品">
+            <el-table-column label="Used goods">
                 <template slot-scope="scope">
                   <router-link :to="{path:'goodsEdit?id='+scope.row.goods.id}">
                     {{scope.row.goods.name}}

@@ -15,12 +15,12 @@ public class Contacts extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(64) COMMENT '邀约人名称'")
     @NotBlank(message = "名称不能为空")
     private String userName;
-    @Column(columnDefinition = "VARCHAR(64) COMMENT '联系电话'")
+    @Column(columnDefinition = "VARCHAR(64) COMMENT 'Contact number'")
     @NotBlank(message = "手机号不能为空")
     private String mobile;
     @Column(columnDefinition = "VARCHAR(32) COMMENT '电子邮箱'")
     @NotBlank(message = "电子邮箱不能为空")
     private String email;
-    @Column(columnDefinition = "VARCHAR(128) COMMENT '备注'")
+    @Column(columnDefinition = "VARCHAR(128) COMMENT 'Remarks'")
     private String remark;
 }

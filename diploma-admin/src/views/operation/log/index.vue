@@ -42,7 +42,7 @@
            <el-form-item label="日志名称">
              <span>{{ props.row.logname }}</span>
            </el-form-item>
-           <el-form-item label="用户">
+           <el-form-item label="User">
              <span>{{ props.row.userName }}</span>
            </el-form-item>
            <el-form-item label="类名">
@@ -62,7 +62,7 @@
      </el-table-column>
 
      <el-table-column
-       label="用户"
+       label="User"
        prop="userName">
      </el-table-column>
      <el-table-column

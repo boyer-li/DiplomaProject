@@ -25,7 +25,7 @@
     <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
               @current-change="handleCurrentChange">
 
-      <el-table-column label="名称">
+      <el-table-column label="Name">
         <template slot-scope="scope">
           {{scope.row.name}}
         </template>
@@ -74,7 +74,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="名称" prop="name">
+            <el-form-item label="Name" prop="name">
               <el-input v-model="form.name" minlength=1></el-input>
             </el-form-item>
           </el-col>

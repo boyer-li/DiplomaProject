@@ -68,7 +68,7 @@ public class JwtUtil {
 
     /**
      * 生成签名,5min后过期
-     * @param user 用户
+     * @param user User
      * @return 加密的token
      */
     public static String sign(JwtUser user, long expireTime) {
