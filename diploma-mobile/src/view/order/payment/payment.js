@@ -31,9 +31,10 @@ export default {
         },
         pay() {
             if(this.payType === 'wxpay'){
+
                 this.wxPrepare()
             }else{
-                Toast('支付宝支付对接中...')
+                Toast('Alipay payment docking in progress...')
             }
         },
         formatPrice(price) {
@@ -41,6 +42,8 @@ export default {
         },
         wxPrepare () {
             payApi.wxPrepare({orderSn:this.order.orderSn}).then(res => {
+
+
                 // 存储微信支付数据data
                 let data = res.data
                 //函数为分装过得  (就是调用微信支付)
@@ -60,17 +63,20 @@ export default {
             })
 
         },
-        wxPay: function (data ) {
+        wxPay: function ( ) {
             //获取后台传入的数据
-            let appId = data.appId
+/*            let appId = data.appId
             let timestamp = data.timeStamp
             let nonceStr = data.nonceStr
             let signature = data.signature
             let packageValue = data.package
             let paySign = data.paySign
-            let signType = data.signType
+            let signType = data.signType*/
             const that = this
-            //下面要发起微信支付了
+
+            that.$router.push('/payment/callback/'+that.order.orderSn)
+
+           /* //下面要发起微信支付了
             wx.config({
                 debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
                 appId: appId, // 必填，公众号的唯一标识
@@ -100,8 +106,8 @@ export default {
                 console.log('微信支付失败',res)
                 Toast('支付失败')
                 // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
-                /*alert("config信息验证失败")*/
-            })
+                /!*alert("config信息验证失败")*!/
+            })*/
         }
 
     }

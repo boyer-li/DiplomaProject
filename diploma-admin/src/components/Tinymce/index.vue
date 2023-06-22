@@ -1,7 +1,7 @@
 <template>
   <div class="upload-container">
     <el-button :style="{background:color,borderColor:color}" icon="el-icon-upload" size="mini" type="primary"
-               @click=" dialogVisible=true">上传图片
+               @click=" dialogVisible=true">Upload Picture
     </el-button>
     <el-dialog :visible.sync="dialogVisible">
       <el-upload

@@ -13,6 +13,8 @@ import com.github.binarywang.wxpay.bean.order.WxPayMpOrderResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 /**
  * @author ：enilu
  * @date ：Created in 2020/3/17 20:15
@@ -29,15 +31,19 @@ public class PayController extends BaseController {
     @RequestMapping(value = "wx/prepare",method = RequestMethod.POST)
     public Object wxPrepare(@RequestParam("orderSn")String orderSn){
         ShopUser user = shopUserService.getCurrentUser();
-        if(StringUtil.isEmpty(user.getWechatOpenId())){
-            return Rets.failure("非微信用户");
-        }
+ /*       if(StringUtil.isEmpty(user.getWechatOpenId())){
+            *//*return Rets.failure("非微信用户");*//*
+        }*/
         Order order = orderService.getByOrderSn(orderSn);
-        WxPayMpOrderResult wxOrder = weixinPayService.prepare(user,order);
-        if(wxOrder!=null) {
-            return Rets.success(wxOrder);
-        }
-        return Rets.failure("数据准备异常");
+        order.setIdUser(user.getId());
+        order.setPayId(UUID.randomUUID().toString().substring(1,15));
+        orderService.paySuccess(order, OrderEnum.PayTypeEnum.UN_SEND.getKey());
+        return Rets.success(order);
+    /*    WxPayMpOrderResult wxOrder = weixinPayService.prepare(user,order);*/
+    /*    if(wxOrder!=null) {*/
+    /*        return Rets.success(wxOrder);*/
+    /*    }*/
+    /*    return Rets.failure("数据准备异常");*/
     }
 
     /**

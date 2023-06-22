@@ -3,8 +3,8 @@
     <div class="block">
       <el-row>
         <el-col :span="24">
-          <el-button type="primary" @click="save" size="mini">{{active==3?"提交":"下一步"}}</el-button>
-          <el-button @click="prev" v-show="active>0" size="mini">上一步</el-button>
+          <el-button type="primary" @click="save" size="mini">{{active==3?"Submit":"Next"}}</el-button>
+          <el-button @click="prev" v-show="active>0" size="mini">Previous</el-button>
         </el-col>
       </el-row>
     </div>
@@ -108,7 +108,7 @@
         <el-col :span="24">
           <el-form-item label="Product specifications">
             <el-radio class="radio" v-model="spec" label="one">Single specification</el-radio>
-            <el-radio class="radio" v-model="spec" label="more" v-show="attrKeyList.length>0">多规格</el-radio>
+            <el-radio class="radio" v-model="spec" label="more" v-show="attrKeyList.length>0">Multiple specifications</el-radio>
           </el-form-item>
         </el-col>
         <el-col :span="24" v-if="spec == 'one'">
@@ -237,8 +237,8 @@
     <div class="block">
       <el-row>
         <el-col :span="24">
-          <el-button type="primary" @click="save" size="mini">{{active==3?"提交":"下一步"}}</el-button>
-          <el-button @click="prev" v-show="active>0" size="mini">上一步</el-button>
+          <el-button type="primary" @click="save" size="mini">{{active==3?"Submit":"Next"}}</el-button>
+          <el-button @click="prev" v-show="active>0" size="mini">Previous</el-button>
         </el-col>
       </el-row>
     </div>

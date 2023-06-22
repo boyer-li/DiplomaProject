@@ -43,7 +43,7 @@
                 :on-success="handleUploadSuccess"
               >
                 <i class="el-icon-upload"></i>
-                <div class="el-upload__text">上传图片</div>
+                <div class="el-upload__text">Upload Picture</div>
               </el-upload>
             </el-form-item>
             <img :src="articleImg" style="height:8rem;"  v-if="ifUpload!==true" >
